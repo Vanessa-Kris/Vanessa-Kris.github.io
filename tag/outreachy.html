@@ -26,7 +26,106 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">Dec 21, 2021</h4>
+        <div id="content">            <h4 class="date">Jan 04, 2022</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="https://vanessa-kris.github.io/week5-blog-post.html" rel="bookmark" title="Permanent Link to &quot;Week5 Blog Post&quot;">Week5 Blog Post</a>
+                </h2>
+
+                
+                
+
+                <h2>Hi again!</h2>
+<p>This should be a very interesting one, let's dive right into it...</p>
+<h4>What makes Fedora packaging project exciting?</h4>
+<p>Well...Anyone can be a package maintainer (cool right?!)  yes you must not know how to code! You just need to be willing to learn and be persistent.</p>
+<p>This particular project is not just exciting but important as well</p>
+<h4>How?</h4>
+<p>RPM is an open source program for installing, uninstalling and managing software packages in Linux.</p>
+<h4>So here's how this works</h4>
+<p>RPM packaging helps you install softwares using a simple command line ...
+let's use chrome for an example.</p>
+<h4>Steps to install chrome using the Fedora Linux Terminal</h4>
+<p>Install Third Party Repositories</p>
+<div class="highlight"><pre><span></span><code>$ sudo dnf install fedora-workstation-repositories
+</code></pre></div>
+
+<p>Enable the Google Chrome repo</p>
+<div class="highlight"><pre><span></span><code>$ sudo dnf config-manager --set-enabled google-chrome
+</code></pre></div>
+
+<p>Finally, install Chrome</p>
+<div class="highlight"><pre><span></span><code>$ sudo dnf install google-chrome-stable
+</code></pre></div>
+
+<h2>How Packages Are Made</h2>
+<p>Fedora docs gives us detailed expalanations so let's get right into it.</p>
+<h4>Getting started</h4>
+<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/Joining_the_Package_Maintainers/">https://docs.fedoraproject.org/en-US/package-maintainers/Joining_the_Package_Maintainers/</a></p>
+<h4>Setting up envirnonment / Building the RPM</h4>
+<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/Packaging_Tutorial_GNU_Hello/">https://docs.fedoraproject.org/en-US/package-maintainers/Packaging_Tutorial_GNU_Hello/</a></p>
+<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/">https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/</a></p>
+<h4>Creating a review request</h4>
+<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#create_your_review_request">https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#create_your_review_request</a></p>
+<h4>Add package to source code management (SCM)</h4>
+<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#add_package_to_source_code_management_scm_system_and_set_owner">https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#add_package_to_source_code_management_scm_system_and_set_owner</a></p>
+<p>And for another interesting part. When packages are made, after a period of time the spec files needs to be updated, and here's how packages are updated.</p>
+<h2>RPM Package Updates</h2>
+<h4>1) Fork the project from upstream</h4>
+<p>Forking the project simply means creating a copy of the upstream project for yourself. That way you can make modifications without affecting the original project.</p>
+<h4>2) Create a pull request (PR)</h4>
+<p>After making modifications to your copy of the project (fork), you may want to add those changes to the main project (upstream). In that case you create a PR and wait for your changes to be merged to the main project (upstream)</p>
+<h4>3) Build for the Fedora system</h4>
+<ul>
+<li>Clone your project</li>
+</ul>
+<div class="highlight"><pre><span></span><code>fedpkg co &lt;package name&gt; 
+</code></pre></div>
+
+<ul>
+<li>Navigate to the Project directory</li>
+</ul>
+<div class="highlight"><pre><span></span><code>cd &lt;package name&gt; 
+</code></pre></div>
+
+<ul>
+<li>Because the repo is up to date for rawhide after the PR is merged, we just build</li>
+</ul>
+<div class="highlight"><pre><span></span><code>fedpkg build 
+</code></pre></div>
+
+<ul>
+<li>For other branches: f35/f34</li>
+</ul>
+<div class="highlight"><pre><span></span><code>fedpkg switch branch &lt;branch name&gt;
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>git merge rawhide
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>git push
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>fedpkg build
+</code></pre></div>
+
+<ul>
+<li>Push the update using the <a href="https://bodhi.fedoraproject.org/updates/new">bodhi web</a> interface because you can choose both the f35 and f34 builds and select the bug ID etc. all at once there.</li>
+</ul>
+<p>Before the outreachy program I didn't know softwares are even packaged by people :smile: I thought we had bots doing all the work. 
+Fedora is just like any other Linux distro like Ubuntu, Manjaro and the likes, but fedora has its own unique commands.</p>
+<p>Some packages takes longer than the others to finish because it is an endless journey of learning . Through this exciting journey I learnt how to set up my Fedora work station, how to package, and i feel this great fufilment that i am contributing to the society and to open source! Thank you Outreachy. </p>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="https://vanessa-kris.github.io/week5-blog-post.html">posted at 20:00</a>
+                    &nbsp;&middot;&nbsp;<a href="https://vanessa-kris.github.io/category/blog.html" rel="tag">Blog</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="https://vanessa-kris.github.io/tag/outreachy.html" class="tags selected">Outreachy</a>
+                    &nbsp;<a href="https://vanessa-kris.github.io/tag/neurofedora.html" class="tags">NeuroFedora</a>
+                </div>
+            </article>            <h4 class="date">Dec 21, 2021</h4>
 
             <article class="post">
                 <h2 class="title">
@@ -36,16 +135,19 @@
                 
                 
 
-                <h3>What am I really doing?</h3>
+                <h2>What am I really doing?</h2>
 <p>RPM packaging with Fedora. RPM files are like zip files (compressed) composed of different softwares mixed to work together.</p>
 <p>Let's just say an RPM packager does the packaging so users can simply use a command line to install softwares e.g </p>
 <div class="highlight"><pre><span></span><code>$ sudo dnf install fedora-packager
 </code></pre></div>
 
 <p>Before Outreachy I did not have the slightest idea of what packaging was all about as a matter of fact it was completely new to me.</p>
-<h3>How it all started</h3>
+<h2>How it all started</h2>
 <p>Scrolling through lists of outreachy projects, I came accross the NeuroFedora project and I picked interest in it because it did not require much (lol) ... I joined the Fedora community and jeez I was lost, everything was so new I just wanted to give up, but I saw other applicants curious and asking questions. So I decided to give it a try. </p>
-<p>I read the docs sent by our mentor (Ankur Sinha) https://fedoramagazine.org/rpm-packages-explained/</p>
+<p>I read the docs sent by our mentor (Ankur Sinha) </p>
+<ul>
+<li><a href="https://fedoramagazine.org/rpm-packages-explained">RPM Packages explained</a></li>
+</ul>
 <p>Well... I was getting a hang of it but not so much and gosh I was intimidated by how much my collegues were picking up already. I decided to write my mentor (private) and he replied! He led me to the open chat where I mustered up courage to ask questions about my uncertainties and within few weeks I was already packaging for Fedora. </p>
 <p>The most interesting part is till now I "always" get stuck on projects and still seek help from my mentor and community members.  I've learnt through the journey that no one really knows it all but you can strive for mastery by consistency, openess, and willingness. </p>
                 <div class="clear"></div>

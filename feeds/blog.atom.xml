@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Vanessa's Blog - Blog</title><link href="https://vanessa-kris.github.io/" rel="alternate"></link><link href="https://vanessa-kris.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://vanessa-kris.github.io/</id><updated>2021-12-21T19:00:00+01:00</updated><entry><title>Everybody Struggles</title><link href="https://vanessa-kris.github.io/everybody-struggles.html" rel="alternate"></link><published>2021-12-21T19:00:00+01:00</published><updated>2021-12-21T19:00:00+01:00</updated><author><name>Vanessa Christopher</name></author><id>tag:vanessa-kris.github.io,2021-12-21:/everybody-struggles.html</id><summary type="html">&lt;p&gt;Everybody Struggles&lt;/p&gt;</summary><content type="html">&lt;h3&gt;What am I really doing?&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Vanessa's Blog - Blog</title><link href="https://vanessa-kris.github.io/" rel="alternate"></link><link href="https://vanessa-kris.github.io/feeds/blog.atom.xml" rel="self"></link><id>https://vanessa-kris.github.io/</id><updated>2022-01-04T20:00:00+01:00</updated><entry><title>Week5 Blog Post</title><link href="https://vanessa-kris.github.io/week5-blog-post.html" rel="alternate"></link><published>2022-01-04T20:00:00+01:00</published><updated>2022-01-04T20:00:00+01:00</updated><author><name>Vanessa Christopher</name></author><id>tag:vanessa-kris.github.io,2022-01-04:/week5-blog-post.html</id><summary type="html">&lt;p&gt;Think about your audience&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Hi again!&lt;/h2&gt;
+&lt;p&gt;This should be a very interesting one, let's dive right into it...&lt;/p&gt;
+&lt;h4&gt;What makes Fedora packaging project exciting?&lt;/h4&gt;
+&lt;p&gt;Well...Anyone can be a package maintainer (cool right?!)  yes you must not know how to code! You just need to be willing to learn and be persistent.&lt;/p&gt;
+&lt;p&gt;This particular project is not just exciting but important as well&lt;/p&gt;
+&lt;h4&gt;How?&lt;/h4&gt;
+&lt;p&gt;RPM is an open source program for installing, uninstalling and managing software packages in Linux.&lt;/p&gt;
+&lt;h4&gt;So here's how this works&lt;/h4&gt;
+&lt;p&gt;RPM packaging helps you install softwares using a simple command line ...
+let's use chrome for an example.&lt;/p&gt;
+&lt;h4&gt;Steps to install chrome using the Fedora Linux Terminal&lt;/h4&gt;
+&lt;p&gt;Install Third Party Repositories&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo dnf install fedora-workstation-repositories
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Enable the Google Chrome repo&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo dnf config-manager --set-enabled google-chrome
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Finally, install Chrome&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo dnf install google-chrome-stable
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;How Packages Are Made&lt;/h2&gt;
+&lt;p&gt;Fedora docs gives us detailed expalanations so let's get right into it.&lt;/p&gt;
+&lt;h4&gt;Getting started&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://docs.fedoraproject.org/en-US/package-maintainers/Joining_the_Package_Maintainers/"&gt;https://docs.fedoraproject.org/en-US/package-maintainers/Joining_the_Package_Maintainers/&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Setting up envirnonment / Building the RPM&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://docs.fedoraproject.org/en-US/package-maintainers/Packaging_Tutorial_GNU_Hello/"&gt;https://docs.fedoraproject.org/en-US/package-maintainers/Packaging_Tutorial_GNU_Hello/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/"&gt;https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Creating a review request&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#create_your_review_request"&gt;https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#create_your_review_request&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Add package to source code management (SCM)&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#add_package_to_source_code_management_scm_system_and_set_owner"&gt;https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#add_package_to_source_code_management_scm_system_and_set_owner&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And for another interesting part. When packages are made, after a period of time the spec files needs to be updated, and here's how packages are updated.&lt;/p&gt;
+&lt;h2&gt;RPM Package Updates&lt;/h2&gt;
+&lt;h4&gt;1) Fork the project from upstream&lt;/h4&gt;
+&lt;p&gt;Forking the project simply means creating a copy of the upstream project for yourself. That way you can make modifications without affecting the original project.&lt;/p&gt;
+&lt;h4&gt;2) Create a pull request (PR)&lt;/h4&gt;
+&lt;p&gt;After making modifications to your copy of the project (fork), you may want to add those changes to the main project (upstream). In that case you create a PR and wait for your changes to be merged to the main project (upstream)&lt;/p&gt;
+&lt;h4&gt;3) Build for the Fedora system&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone your project&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fedpkg co &amp;lt;package name&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Navigate to the Project directory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cd &amp;lt;package name&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Because the repo is up to date for rawhide after the PR is merged, we just build&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fedpkg build 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For other branches: f35/f34&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fedpkg switch branch &amp;lt;branch name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git merge rawhide
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;fedpkg build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Push the update using the &lt;a href="https://bodhi.fedoraproject.org/updates/new"&gt;bodhi web&lt;/a&gt; interface because you can choose both the f35 and f34 builds and select the bug ID etc. all at once there.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before the outreachy program I didn't know softwares are even packaged by people :smile: I thought we had bots doing all the work. 
+Fedora is just like any other Linux distro like Ubuntu, Manjaro and the likes, but fedora has its own unique commands.&lt;/p&gt;
+&lt;p&gt;Some packages takes longer than the others to finish because it is an endless journey of learning . Through this exciting journey I learnt how to set up my Fedora work station, how to package, and i feel this great fufilment that i am contributing to the society and to open source! Thank you Outreachy. &lt;/p&gt;</content><category term="Blog"></category><category term="Outreachy"></category><category term="NeuroFedora"></category></entry><entry><title>Everybody Struggles</title><link href="https://vanessa-kris.github.io/everybody-struggles.html" rel="alternate"></link><published>2021-12-21T19:00:00+01:00</published><updated>2021-12-21T19:00:00+01:00</updated><author><name>Vanessa Christopher</name></author><id>tag:vanessa-kris.github.io,2021-12-21:/everybody-struggles.html</id><summary type="html">&lt;p&gt;Everybody Struggles&lt;/p&gt;</summary><content type="html">&lt;h2&gt;What am I really doing?&lt;/h2&gt;
 &lt;p&gt;RPM packaging with Fedora. RPM files are like zip files (compressed) composed of different softwares mixed to work together.&lt;/p&gt;
 &lt;p&gt;Let's just say an RPM packager does the packaging so users can simply use a command line to install softwares e.g &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;$ sudo dnf install fedora-packager
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Before Outreachy I did not have the slightest idea of what packaging was all about as a matter of fact it was completely new to me.&lt;/p&gt;
-&lt;h3&gt;How it all started&lt;/h3&gt;
+&lt;h2&gt;How it all started&lt;/h2&gt;
 &lt;p&gt;Scrolling through lists of outreachy projects, I came accross the NeuroFedora project and I picked interest in it because it did not require much (lol) ... I joined the Fedora community and jeez I was lost, everything was so new I just wanted to give up, but I saw other applicants curious and asking questions. So I decided to give it a try. &lt;/p&gt;
-&lt;p&gt;I read the docs sent by our mentor (Ankur Sinha) https://fedoramagazine.org/rpm-packages-explained/&lt;/p&gt;
+&lt;p&gt;I read the docs sent by our mentor (Ankur Sinha) &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://fedoramagazine.org/rpm-packages-explained"&gt;RPM Packages explained&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Well... I was getting a hang of it but not so much and gosh I was intimidated by how much my collegues were picking up already. I decided to write my mentor (private) and he replied! He led me to the open chat where I mustered up courage to ask questions about my uncertainties and within few weeks I was already packaging for Fedora. &lt;/p&gt;
 &lt;p&gt;The most interesting part is till now I "always" get stuck on projects and still seek help from my mentor and community members.  I've learnt through the journey that no one really knows it all but you can strive for mastery by consistency, openess, and willingness. &lt;/p&gt;</content><category term="Blog"></category><category term="Outreachy"></category><category term="NeuroFedora"></category></entry><entry><title>Introduction</title><link href="https://vanessa-kris.github.io/introduction.html" rel="alternate"></link><published>2021-12-10T19:20:00+01:00</published><updated>2021-12-10T19:20:00+01:00</updated><author><name>Vanessa Christopher</name></author><id>tag:vanessa-kris.github.io,2021-12-10:/introduction.html</id><summary type="html">&lt;p&gt;This is an introduction of myself&lt;/p&gt;</summary><content type="html">&lt;p&gt;I am Vanessa Christopher (she/her) a Cameroonian, I am 21.&lt;/p&gt;
 &lt;p&gt;My core values are intelligence, growth and freedom.&lt;/p&gt;
