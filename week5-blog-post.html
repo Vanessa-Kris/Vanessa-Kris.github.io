@@ -38,86 +38,17 @@
                 
                 
 
-                <h2>Hi again!</h2>
-<p>This should be a very interesting one, let's dive right into it...</p>
-<h4>What makes Fedora packaging project exciting?</h4>
-<p>Well...Anyone can be a package maintainer (cool right?!)  yes you must not know how to code! You just need to be willing to learn and be persistent.</p>
-<p>This particular project is not just exciting but important as well</p>
-<h4>How?</h4>
-<p>RPM is an open source program for installing, uninstalling and managing software packages in Linux.</p>
-<h4>So here's how this works</h4>
-<p>RPM packaging helps you install softwares using a simple command line ...
-let's use chrome for an example.</p>
-<h4>Steps to install chrome using the Fedora Linux Terminal</h4>
-<p>Install Third Party Repositories</p>
-<div class="highlight"><pre><span></span><code>$ sudo dnf install fedora-workstation-repositories
-</code></pre></div>
-
-<p>Enable the Google Chrome repo</p>
-<div class="highlight"><pre><span></span><code>$ sudo dnf config-manager --set-enabled google-chrome
-</code></pre></div>
-
-<p>Finally, install Chrome</p>
-<div class="highlight"><pre><span></span><code>$ sudo dnf install google-chrome-stable
-</code></pre></div>
-
-<h2>How Packages Are Made</h2>
-<p>Fedora docs gives us detailed expalanations so let's get right into it.</p>
-<h4>Getting started</h4>
-<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/Joining_the_Package_Maintainers/">https://docs.fedoraproject.org/en-US/package-maintainers/Joining_the_Package_Maintainers/</a></p>
-<h4>Setting up envirnonment / Building the RPM</h4>
-<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/Packaging_Tutorial_GNU_Hello/">https://docs.fedoraproject.org/en-US/package-maintainers/Packaging_Tutorial_GNU_Hello/</a></p>
-<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/">https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/</a></p>
-<h4>Creating a review request</h4>
-<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#create_your_review_request">https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#create_your_review_request</a></p>
-<h4>Add package to source code management (SCM)</h4>
-<p><a href="https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#add_package_to_source_code_management_scm_system_and_set_owner">https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_New_Contributors/#add_package_to_source_code_management_scm_system_and_set_owner</a></p>
-<p>And for another interesting part. When packages are made, after a period of time the spec files needs to be updated, and here's how packages are updated.</p>
-<h2>RPM Package Updates</h2>
-<h4>1) Fork the project from upstream</h4>
-<p>Forking the project simply means creating a copy of the upstream project for yourself. That way you can make modifications without affecting the original project.</p>
-<h4>2) Create a pull request (PR)</h4>
-<p>After making modifications to your copy of the project (fork), you may want to add those changes to the main project (upstream). In that case you create a PR and wait for your changes to be merged to the main project (upstream)</p>
-<h4>3) Build for the Fedora system</h4>
-<ul>
-<li>Clone your project</li>
-</ul>
-<div class="highlight"><pre><span></span><code>fedpkg co &lt;package name&gt; 
-</code></pre></div>
-
-<ul>
-<li>Navigate to the Project directory</li>
-</ul>
-<div class="highlight"><pre><span></span><code>cd &lt;package name&gt; 
-</code></pre></div>
-
-<ul>
-<li>Because the repo is up to date for rawhide after the PR is merged, we just build</li>
-</ul>
-<div class="highlight"><pre><span></span><code>fedpkg build 
-</code></pre></div>
-
-<ul>
-<li>For other branches: f35/f34</li>
-</ul>
-<div class="highlight"><pre><span></span><code>fedpkg switch branch &lt;branch name&gt;
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>git merge rawhide
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>git push
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>fedpkg build
-</code></pre></div>
-
-<ul>
-<li>Push the update using the <a href="https://bodhi.fedoraproject.org/updates/new">bodhi web</a> interface because you can choose both the f35 and f34 builds and select the bug ID etc. all at once there.</li>
-</ul>
-<p>Before the outreachy program I didn't know softwares are even packaged by people :smile: I thought we had bots doing all the work. 
-Fedora is just like any other Linux distro like Ubuntu, Manjaro and the likes, but fedora has its own unique commands.</p>
-<p>Some packages takes longer than the others to finish because it is an endless journey of learning . Through this exciting journey I learnt how to set up my Fedora work station, how to package, and i feel this great fufilment that i am contributing to the society and to open source! Thank you Outreachy. </p>
+                <p>This should be an interesting one considering the fact i'm going to be telling you about my project with Fedora 🙂</p>
+<h3>What is Fedora?</h3>
+<p>Fedora is a linux operating system just like everyother e.g Ubuntu.... or Windows 🙂</p>
+<h3>What does Fedora do?</h3>
+<p>Well... a whole lot i still don't understand it all :laugh: but we are taking baby steps right? </p>
+<h3>What do I know though?</h3>
+<p>I know Fedora packages softwares, you know like computer applications.  and yes thats what i do with Fedora. some bunch of smart people do all the coding and all i have to do is package it all together so it works on our computers.</p>
+<h3>Why this project?</h3>
+<p>For the most part I don't have to code, I can't even code to save my life 😂 and i love this project because i can do lots of amazing stuffs ummm let's say i want to watch a movie on my computer with VLC media player and i dont have it installed in my computer, so I need to install it using my terminal, i go on google and search "how to install VLC on fedora operating system (OS)". And I get that VLC is not yet packaged for Fedora! Great opportunity to be cool right? I get right into learning how to package for Fedora, won't it be awesome to be a able to solve a problem as big as that? wow Open source is cool i know!</p>
+<p>So this projects helps users like us install/uninstall softwares (applications) using simple command lines on our <a href="https://opensource.com/article/21/8/linux-terminal">terminal</a> The walk with outreachy and Fedora has been exciting and thrilling, there's always something new to learn and my mentor is always there to answer my buggy questions 😂</p>
+<p>Thank you Outreachy and Fedora for giving me the opportunity to contribute to open source. 🚀</p>
                 <div class="clear"></div>
 
                 <div class="info">
