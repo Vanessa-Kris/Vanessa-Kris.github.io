@@ -26,7 +26,101 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">Jan 26, 2022</h4>
+        <div id="content">            <h4 class="date">Feb 08, 2022</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="https://vanessa-kris.github.io/a-story-about-python-and-c.html" rel="bookmark" title="Permanent Link to &quot;A Story About Python And C.&quot;">A Story About Python And C.</a>
+                </h2>
+
+                
+                
+
+                <p>Hello...</p>
+<p>Let's talk a little about Python and C</p>
+<h2>A little back story</h2>
+<p>So I was asked "what's the difference between python and C?" and I was like what?? I actually do not know!!! Then i did a little research and... let's find out what I learnt.</p>
+<ul>
+<li>
+<p>Python is a multi-paradigm language and C is a structural programming language. Python is a general purpose language that is used for machine learning, natural language processing, web development and many more, C is mainly used for hardware related application development such as operating systems and network drivers.</p>
+</li>
+<li>
+<p>Python has very fewer keywords and more English language syntax whereas C is far more difficult to write and maintain.</p>
+</li>
+<li>
+<p>Python is much slower than C, Python takes significant CPU time for interpretation.</p>
+</li>
+<li>
+<p>Python is a an interpreted language while C is a compiled language.</p>
+</li>
+</ul>
+<p>What is a compiled and an interpreted language??</p>
+<p>Compiled Language 
+Compiled languages are converted directly into machine code that the processor can execute. As a result, they tend to be faster and more efficient to execute than interpreted languages. They also give the developer more control over hardware aspects like CPU usage.</p>
+<p>Interpreted Language
+This runs through a program line by line and execute each command.</p>
+<ul>
+<li>Python is dynamically typed while C is statically typed.</li>
+</ul>
+<p>Static Typing
+Static type checks are performed without running the program. This is done as your program is compiled. The type of variable is not allowed to change over it's lifetime.</p>
+<p>Dynamic Typing
+Python is a dynamically typed language. This means that the Python interpreter does type checking only as code runs, and the type of a variable is allowed to change over its lifetime.</p>
+<ul>
+<li>Python is a strongly typed language while C is weakly typed.</li>
+</ul>
+<p>Weakly typed languages make conversions between unrelated types implicitly; whereas, strongly typed languages don’t allow implicit conversions between unrelated types.</p>
+<p>According to Fedora Packaging Python packages have different requirements from C let's take a quick look:</p>
+<h2>Python packages</h2>
+<p>Every package that uses Python (at runtime and/or build time) and/or installs Python modules MUST explicitly include BuildRequires: python3-devel in its .spec file, even if Python is not actually invoked during build time.</p>
+<p>Mandatory macros</p>
+<p>The following macros MUST be used where applicable.</p>
+<p>The expansions in parentheses are provided only as reference/examples.</p>
+<p>The macros are defined for you in all supported Fedora and EPEL versions.</p>
+<p>%{python3} (/usr/bin/python3): The Python interpreter. For example, this macro should be used for invoking Python from a spec file script, passed to configure scripts to select a Python executable, or used as %{python3} -m pip to run a Python-based tool.</p>
+<p>If the packaged software invokes Python at run time (as opposed to running Python to build/test it), it might be necessary to pass flags to %{python3} to isolate it from user-installed packages. See Shebangs for details.</p>
+<p>%{python3_version} (e.g. 3.9, 3.10): Version of the Python interpreter.</p>
+<p>%{python3_version_nodots} (e.g. 39, 310): Version of the Python interpreter without the dot.</p>
+<p>%{python3_sitelib} (e.g. /usr/lib/python3.9/site-packages): Where pure-Python modules are installed.</p>
+<p>%{python3_sitearch} (e.g. /usr/lib64/python3.9/site-packages): Where Python extension modules (native code, e.g. compiled from C) are installed.</p>
+<p>Packages MUST include the source file (<em>.py) AND the bytecode cache (</em>.pyc) for each pure-Python importable module. The source files MUST be included in the same package as the bytecode cache.</p>
+<p>Each Python package MUST include Package Distribution Metadata conforming to PyPA specifications (specifically, Recording installed distributons).</p>
+<p>Packages MUST NOT own shared directories owned by Python itself, such as the top-level <strong>pycache</strong> directories (%{python3_sitelib}/<strong>pycache</strong>, %{python3_sitearch}/<strong>pycache</strong>).
+<a href="https://docs.fedoraproject.org/en-US/packaging-guidelines/Python/">Read more</a></p>
+<h2>C</h2>
+<p>I haven't had much experience is building C packages so far but; If your application is a C or C++ application you must list a BuildRequires against gcc, gcc-c++ or clang. Those packages will include everything that is required to build a standards conforming C or C++ application.</p>
+<p>Other languages Fedora packages uses for packaging are:</p>
+<ul>
+<li>Ada </li>
+<li>C++ </li>
+<li>D </li>
+<li>Fotran </li>
+<li>Golang </li>
+<li>Haskell </li>
+<li>Java </li>
+<li>JavaScript </li>
+<li>Lisp </li>
+<li>Mono </li>
+<li>Node.js </li>
+<li>Ocaml </li>
+<li>Octave </li>
+<li>Perl </li>
+<li>PHP </li>
+<li>R </li>
+<li>Ruby </li>
+<li>Rust </li>
+<li>Tcl/Tk extensions.</li>
+</ul>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="https://vanessa-kris.github.io/a-story-about-python-and-c.html">posted at 03:00</a>
+                    &nbsp;&middot;&nbsp;<a href="https://vanessa-kris.github.io/category/blog.html" rel="tag">Blog</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="https://vanessa-kris.github.io/tag/outreachy.html" class="tags">Outreachy</a>
+                    &nbsp;<a href="https://vanessa-kris.github.io/tag/neurofedora.html" class="tags selected">NeuroFedora</a>
+                </div>
+            </article>            <h4 class="date">Jan 26, 2022</h4>
 
             <article class="post">
                 <h2 class="title">
