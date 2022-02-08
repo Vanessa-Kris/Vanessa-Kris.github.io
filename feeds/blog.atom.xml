@@ -51,7 +51,7 @@ Python is a dynamically typed language. This means that the Python interpreter d
 &lt;p&gt;Packages MUST NOT own shared directories owned by Python itself, such as the top-level &lt;strong&gt;pycache&lt;/strong&gt; directories (%{python3_sitelib}/&lt;strong&gt;pycache&lt;/strong&gt;, %{python3_sitearch}/&lt;strong&gt;pycache&lt;/strong&gt;).
 &lt;a href="https://docs.fedoraproject.org/en-US/packaging-guidelines/Python/"&gt;Read more&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;C&lt;/h2&gt;
-&lt;p&gt;I haven't had much experience is building C packages so far but; If your application is a C or C++ application you must list a BuildRequires against gcc, gcc-c++ or clang. Those packages will include everything that is required to build a standards conforming C or C++ application.&lt;/p&gt;
+&lt;p&gt;I haven't had much experience in building C packages so far but; If your application is a C or C++ application you must list a BuildRequires against gcc, gcc-c++ or clang. Those packages will include everything that is required to build a standards conforming C or C++ application.&lt;/p&gt;
 &lt;p&gt;Other languages Fedora packages uses for packaging are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Ada &lt;/li&gt;
