@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Landing from "./pages/Landing";
@@ -10,7 +10,6 @@ import Project from "./pages/Project";
 import PageNotFound from "./pages/404";
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
-import Gallery from "./pages/Gallery";
 import Footer from "./components/footer";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -21,9 +20,10 @@ const darkTheme = createTheme({
     mode: "dark",
   },
 });
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-export default function Index() {
-  const router = createBrowserRouter([
+function Index() {
+  const router = createHashRouter([
     {
       path: "/",
       element: <Landing />,
@@ -45,10 +45,6 @@ export default function Index() {
       element: <Resume />,
     },
     {
-      path: "/gallery",
-      element: <Gallery />,
-    },
-    {
       path: "*",
       element: <PageNotFound />,
     },
@@ -57,9 +53,9 @@ export default function Index() {
   return (
     <ThemeProvider theme={darkTheme}>
       <React.StrictMode>
+        <RouterProvider router={router} />
         <CssBaseline />
         <ResponsiveAppBar />
-        <RouterProvider router={router} />
         <Footer />
         <Particle />
       </React.StrictMode>
@@ -67,5 +63,4 @@ export default function Index() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Index />);
