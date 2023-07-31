@@ -60,19 +60,15 @@ export default function App() {
             {" "}
             <li>Home</li>{" "}
           </a>
-          <a href="/about">
+          <a href="#/about">
             {" "}
             <li>About</li>{" "}
           </a>
-          <a href="/project">
-            {" "}
-            <li>Projects</li>{" "}
-          </a>
-          <a href="/resume">
+          <a href="#/resume">
             {" "}
             <li>Resume</li>{" "}
           </a>
-          <a href="/contact">
+          <a href="#/contact">
             {" "}
             <li>Contact</li>{" "}
           </a>

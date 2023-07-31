@@ -45,7 +45,7 @@ export default function Landing() {
           />
         </Typography>
       </Box>
-      <a href="/about">
+      <a href="#/about">
         <Box align="center" sx={{ p: { md: 15, xs: 10 } }}>
           About Me <FontAwesomeIcon icon={faArrowRight} />
         </Box>

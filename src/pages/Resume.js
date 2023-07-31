@@ -20,7 +20,7 @@ function Resume() {
         <Button href={resume} sx={{ px: 10 }} variant="outlined">
           Download
         </Button>
-        <a href="/contact">
+        <a href="#/contact">
           <Box sx={{ pt: 10, pl: 2 }}>
             Contact <FontAwesomeIcon icon={faArrowRight} />
           </Box>

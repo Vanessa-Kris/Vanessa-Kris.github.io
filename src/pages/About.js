@@ -60,20 +60,25 @@ export default function About() {
         <Typography variant="h6" sx={{ bgcolor: "#11102e" }}>
           For the love of food, pictures and nature, I'd love to share my world
           through photos. But! you'll have to visit my{" "}
-          <a href="https://facebook.com/vanessa.igwe.35" rel="noreferrer">
+          <a
+            href="https://facebook.com/vanessa.igwe.35"
+            rel="noreferrer"
+            target="_blank"
+          >
             facebook
           </a>{" "}
           or{" "}
           <a
             href="https://www.instagram.com/vanessa_christopher_i"
             rel="noreferrer"
+            target="_blank"
           >
             instagram
           </a>
         </Typography>
       </Box>
 
-      <a href="/project">
+      <a href="#/project">
         <Box align="start" sx={{ p: { md: 13, xs: 7 } }}>
           Projects <FontAwesomeIcon icon={faArrowRight} />
         </Box>

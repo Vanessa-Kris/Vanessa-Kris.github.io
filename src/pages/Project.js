@@ -500,7 +500,7 @@ export default function Project() {
         </Grid>
         {/*  */}
       </Grid>
-      <a href="/resume">
+      <a href="#/resume">
         <Box align="start" sx={{ p: { md: 7, xs: 4 } }}>
           Resume <FontAwesomeIcon icon={faArrowRight} />
         </Box>

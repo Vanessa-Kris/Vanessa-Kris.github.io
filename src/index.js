@@ -20,6 +20,7 @@ const darkTheme = createTheme({
     mode: "dark",
   },
 });
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function Index() {
