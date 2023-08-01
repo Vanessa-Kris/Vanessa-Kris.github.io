@@ -64,6 +64,10 @@ export default function App() {
             {" "}
             <li>About</li>{" "}
           </a>
+          <a href="#/project">
+            {" "}
+            <li>Projects</li>{" "}
+          </a>
           <a href="#/resume">
             {" "}
             <li>Resume</li>{" "}
