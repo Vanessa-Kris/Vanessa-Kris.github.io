@@ -16,6 +16,7 @@ import img6 from "../image/6.png";
 import img7 from "../image/7.png";
 import img8 from "../image/8.png";
 import img9 from "../image/9.png";
+import img10 from "../image/10.png";
 
 export default function Project() {
   return (
@@ -99,7 +100,7 @@ export default function Project() {
             <Card sx={{ maxWidth: 445, bgcolor: "#000" }}>
               <CardMedia
                 component="img"
-                alt="green iguana"
+                alt="Stunners Galleria blod website"
                 height="100%"
                 image={img2}
               />
@@ -168,7 +169,7 @@ export default function Project() {
             <Card sx={{ maxWidth: 445, bgcolor: "#000" }}>
               <CardMedia
                 component="img"
-                alt="green iguana"
+                alt="SMSWithoutBorders"
                 height="100%"
                 image={img3}
               />
@@ -219,7 +220,7 @@ export default function Project() {
             <Card sx={{ maxWidth: 445, bgcolor: "#000" }}>
               <CardMedia
                 component="img"
-                alt="green iguana"
+                alt="Impact investment website"
                 height="100%"
                 image={img4}
               />
@@ -271,7 +272,7 @@ export default function Project() {
             <Card sx={{ maxWidth: 445, bgcolor: "#000" }}>
               <CardMedia
                 component="img"
-                alt="green iguana"
+                alt="Start up website"
                 height="100%"
                 image={img7}
               />
@@ -330,7 +331,7 @@ export default function Project() {
             <Card sx={{ maxWidth: 445, bgcolor: "#000" }}>
               <CardMedia
                 component="img"
-                alt="green iguana"
+                alt="Portfolio website"
                 height="100%"
                 image={img6}
               />
@@ -389,7 +390,7 @@ export default function Project() {
             <Card sx={{ maxWidth: 445, bgcolor: "#000" }}>
               <CardMedia
                 component="img"
-                alt="green iguana"
+                alt="Pasteries website"
                 height="100%"
                 image={img8}
               />
@@ -457,7 +458,7 @@ export default function Project() {
             <Card sx={{ maxWidth: 445, bgcolor: "#000" }}>
               <CardMedia
                 component="img"
-                alt="green iguana"
+                alt="Fashion business website"
                 height="100%"
                 image={img9}
               />
@@ -467,6 +468,65 @@ export default function Project() {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   Perfumes, bags and make up online store
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button
+                  sx={{ borderRadius: 30, fontSize: 11 }}
+                  disabled
+                  variant="contained"
+                  size="small"
+                >
+                  HTML
+                </Button>
+                <Button
+                  sx={{ borderRadius: 30, fontSize: 11 }}
+                  disabled
+                  variant="contained"
+                  size="small"
+                >
+                  CSS
+                </Button>
+                <Button
+                  sx={{ borderRadius: 30, fontSize: 11 }}
+                  disabled
+                  variant="contained"
+                  size="small"
+                >
+                  Bootstrap
+                </Button>
+              </CardActions>
+            </Card>
+          </a>
+        </Grid>
+        {/*  */}
+        <Grid
+          item
+          md={4}
+          xs={12}
+          sx={{ p: 2 }}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <a
+            href="https://aroma-kitchen.netlify.app"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Card sx={{ maxWidth: 445, bgcolor: "#000" }}>
+              <CardMedia
+                component="img"
+                alt="Aroma kitchen website"
+                height="100%"
+                image={img10}
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Aroma Kitchen
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Food ordering website
                 </Typography>
               </CardContent>
               <CardActions>
