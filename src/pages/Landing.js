@@ -23,7 +23,7 @@ export default function Landing() {
             paddingTop: { xs: 17, md: 25 },
           }}
         >
-          Hi, I'm Vanessa Christopher
+          Hi, I'm Vanessa Igwe
         </Typography>
         <Typography variant="h4" align="center">
           <TypeAnimation

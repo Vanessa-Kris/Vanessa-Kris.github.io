@@ -57,24 +57,19 @@ export default function App() {
       <nav className="menu">
         <ul>
           <a href="/">
-            {" "}
-            <li>Home</li>{" "}
+            <li>Home</li>
           </a>
           <a href="#/about">
-            {" "}
-            <li>About</li>{" "}
+            <li>About</li>
           </a>
           <a href="#/project">
-            {" "}
-            <li>Projects</li>{" "}
+            <li>Projects</li>
           </a>
           <a href="#/resume">
-            {" "}
-            <li>Resume</li>{" "}
+            <li>Resume</li>
           </a>
           <a href="#/contact">
-            {" "}
-            <li>Contact</li>{" "}
+            <li>Contact</li>
           </a>
         </ul>
       </nav>
