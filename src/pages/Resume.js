@@ -5,6 +5,10 @@ import React from "react";
 import resume from "../images/Resume.pdf";
 import resumepng from "../images/resume.png";
 
+function downloadUrl(url) {
+  window.open(url, "_self");
+}
+
 function Resume() {
   return (
     <Box sx={{ my: { md: 17, xs: 10 } }}>
@@ -17,7 +21,12 @@ function Resume() {
         <img src={resumepng} alt="Vanessa's Resume" width="100%" />
       </Box>
       <Box align="start" sx={{ pl: { md: 30, xs: 2 } }}>
-        <Button href={resume} sx={{ px: 10 }} variant="outlined">
+        <Button
+          href={resume}
+          sx={{ px: 10 }}
+          variant="outlined"
+          onClick={downloadUrl}
+        >
           Download
         </Button>
         <a href="#/contact">
