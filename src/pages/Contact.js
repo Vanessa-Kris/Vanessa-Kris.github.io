@@ -100,7 +100,7 @@ const Contact = () => {
           <a
             href="https://www.linkedin.com/in/vanessa-christopher-igwe-712807218/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer "
           >
             <Box sx={{ bgcolor: "#38369A", p: 5 }}>
               <FontAwesomeIcon
