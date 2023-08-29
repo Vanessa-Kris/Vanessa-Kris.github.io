@@ -240,7 +240,7 @@ export default function Project() {
                   variant="contained"
                   size="small"
                 >
-                  Share
+                  HTML
                 </Button>
                 <Button
                   sx={{ borderRadius: 30, fontSize: 11 }}
@@ -248,7 +248,15 @@ export default function Project() {
                   variant="contained"
                   size="small"
                 >
-                  Learn More
+                  CSS
+                </Button>
+                <Button
+                  sx={{ borderRadius: 30, fontSize: 11 }}
+                  disabled
+                  variant="contained"
+                  size="small"
+                >
+                  Bootstrap
                 </Button>
               </CardActions>
             </Card>
