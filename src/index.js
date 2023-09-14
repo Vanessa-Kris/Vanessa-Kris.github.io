@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import {
+  createHashRouter,
+  RouterProvider,
+  useLocation,
+} from "react-router-dom";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Landing from "./pages/Landing";
@@ -14,6 +18,10 @@ import Footer from "./components/footer";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Particle from "./components/Particle";
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "G-9DKW2F3D33";
+ReactGA.initialize(TRACKING_ID);
 
 const darkTheme = createTheme({
   palette: {
@@ -50,6 +58,12 @@ function Index() {
       element: <PageNotFound />,
     },
   ]);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.pageview(location.pathname + location.search);
+  }, [location]);
 
   return (
     <ThemeProvider theme={darkTheme}>
