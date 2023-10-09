@@ -9,7 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
-  faTwitter,
+  faXTwitter,
   faFacebook,
   faInstagram,
   faLinkedin,
@@ -152,7 +152,7 @@ export default function Contact() {
         >
           <FontAwesomeIcon
             style={{ fontSize: "30px", marginRight: 30 }}
-            icon={faTwitter}
+            icon={faXTwitter}
             color="#a55f71"
           />
         </Box>
