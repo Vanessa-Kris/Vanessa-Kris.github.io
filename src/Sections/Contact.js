@@ -106,7 +106,7 @@ export default function Contact() {
 
         <Typography
           variant={"h4"}
-          sx={{ fontSize: { md: "37px", xs: "30px" } }}
+          sx={{ fontSize: { md: "30px", xs: "25px" }, color: "#fff" }}
         >
           Sonac Street Bamenda, Cameroon
         </Typography>
@@ -117,7 +117,7 @@ export default function Contact() {
 
         <Typography
           variant={"h4"}
-          sx={{ mb: 5, fontSize: { md: "37px", xs: "30px" } }}
+          sx={{ mb: 5, fontSize: { md: "30px", xs: "25px" }, color: "#fff" }}
         >
           Vanessaigwe1@gmail.com
         </Typography>

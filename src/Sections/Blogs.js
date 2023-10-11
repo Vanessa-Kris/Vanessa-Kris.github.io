@@ -11,19 +11,19 @@ import {
   Button,
 } from "@mui/material";
 import Outreachy21 from "../Blogs/outreachy21";
-import Transition from "../Blogs/transition";
+// import Transition from "../Blogs/transition";
 
 export default function Blogs() {
   const [openIndex, setOpenIndex] = useState(-1);
 
   const blogPosts = [
-    {
-      imageUrl:
-        "https://img.freepik.com/free-photo/spaceship-orbits-dark-galaxy-glowing-blue-comet-generated-by-ai_188544-9662.jpg?size=626&ext=jpg&ga=GA1.1.1563347392.1696364341&semt=sph",
-      date: "October 1, 2023",
-      title: "2 Years Tech Journey check! Progress so far and all the gist.",
-      content: "Coming Soon",
-    },
+    // {
+    //   imageUrl:
+    //     "https://img.freepik.com/free-photo/spaceship-orbits-dark-galaxy-glowing-blue-comet-generated-by-ai_188544-9662.jpg?size=626&ext=jpg&ga=GA1.1.1563347392.1696364341&semt=sph",
+    //   date: "October 1, 2023",
+    //   title: "2 Years Tech Journey check! Progress so far and all the gist.",
+    //   content: "Coming Soon",
+    // },
     {
       imageUrl:
         "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210414121548/Outreachy-Internship-Program.png",
@@ -31,13 +31,13 @@ export default function Blogs() {
       title: "My Outreachy December 2021/2022 Journey With Fedora.",
       content: <Outreachy21 />,
     },
-    {
-      imageUrl:
-        "https://img.freepik.com/free-photo/man-jump-through-gap-hill-man-jumping-cliff-blue-sky-business-concept-idea_1323-186.jpg?size=626&ext=jpg&ga=GA1.2.1563347392.1696364341&semt=sph",
-      date: "October 1, 2023",
-      title: "Transition to Tech (How I ended up here and all the challenges).",
-      content: <Transition />,
-    },
+    // {
+    //   imageUrl:
+    //     "https://img.freepik.com/free-photo/man-jump-through-gap-hill-man-jumping-cliff-blue-sky-business-concept-idea_1323-186.jpg?size=626&ext=jpg&ga=GA1.2.1563347392.1696364341&semt=sph",
+    //   date: "October 1, 2023",
+    //   title: "Transition to Tech (How I ended up here and all the challenges).",
+    //   content: <Transition />,
+    // },
   ];
 
   const handleOpen = (index) => {
