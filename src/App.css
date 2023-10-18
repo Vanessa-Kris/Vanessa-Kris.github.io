@@ -8,6 +8,12 @@
   font-family: 'Gabarito', cursive !important;
     cursor: none;
 }
+@media (max-width: 1000px) {
+  * {
+        cursor: auto;
+  }
+}
+
 
 body {
     background-color: #161616 !important;   

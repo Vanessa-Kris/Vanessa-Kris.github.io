@@ -64,19 +64,6 @@ class App extends Component {
                 />
               }
             />
-            {/* <Route path="about" element={<Layout about={<About />} />} />
-            <Route
-              path="/portfolio"
-              element={<Layout portfolio={<Portfolio />} />}
-            />
-            <Route path="/services" element={<Layout />} />
-            <Route
-              path="/experience"
-              element={<Layout experience={<Experience />} />}
-            />
-            <Route path="/reviews" element={<Layout reviews={<Reviews />} />} />
-            <Route path="blogs" element={<Layout blogs={<Blogs />} />} />
-            <Route path="/contact" element={<Layout contact={<Contact />} />} /> */}
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </ThemeProvider>

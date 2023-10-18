@@ -266,7 +266,7 @@ export default function Experience() {
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
-            Git
+            Git/GitHub
           </Typography>
           <LinearProgress variant="determinate" value={80} />
         </Box>
@@ -284,13 +284,31 @@ export default function Experience() {
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
+            Linux
+          </Typography>
+          <LinearProgress variant="determinate" value={90} />
+        </Box>
+        <Box sx={{ my: 2 }}>
+          <Typography variant="h6" sx={{ fontSize: "15px" }}>
+            NPM
+          </Typography>
+          <LinearProgress variant="determinate" value={80} />
+        </Box>
+        <Box sx={{ my: 2 }}>
+          <Typography variant="h6" sx={{ fontSize: "15px" }}>
             RPM
+          </Typography>
+          <LinearProgress variant="determinate" value={70} />
+        </Box>
+        <Box sx={{ my: 2 }}>
+          <Typography variant="h6" sx={{ fontSize: "15px" }}>
+            Framer Motion
           </Typography>
           <LinearProgress variant="determinate" value={50} />
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
-            Framer Motion
+            Figma
           </Typography>
           <LinearProgress variant="determinate" value={50} />
         </Box>
