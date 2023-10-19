@@ -120,7 +120,7 @@ export default function Portfolio() {
             component="a"
             target="_blank"
             rel="noreferrer noopener"
-            href="/"
+            href="https://career-navigator-academy.github.io/"
             sx={{ color: "#fff", fontSize: "25px" }}
           >
             Career Navigator Academy

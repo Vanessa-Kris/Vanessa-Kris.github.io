@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Gabarito&display=swap');
 * {
   /* font-family: 'Cormorant Garamond', serif !important; */
-  font-family: 'Gabarito', cursive !important;
+  font-family: 'Gabarito', sans-serif !important;
     cursor: none;
 }
 @media (max-width: 1000px) {
@@ -41,15 +41,6 @@ p{
     fill: none;
   }
   
-  .bg {
-    stroke: var(--accent);
-    opacity: 0.3;
-  }
-  
-  #progress .indicator {
-    stroke: var(--accent);
-  }
-  
   .list {
     display: flex;
     list-style: none;
@@ -76,11 +67,7 @@ p{
     background: #fff3;
     -webkit-border-radius: 1ex;
   }
-  
-  ::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    -webkit-border-radius: 1ex;
-  }
+
   
   ::-webkit-scrollbar-corner {
     background: #fff3;
@@ -88,13 +75,11 @@ p{
   
   .listitems {
     flex: 0 0 250px;
-    background: var(--accent);
     margin: 0 20px 0 0;
   }
    
   .listitems2 {
     flex: 0 0 340px;
-    background: var(--accent);
     margin: 0 20px 0 0;
   }
   
