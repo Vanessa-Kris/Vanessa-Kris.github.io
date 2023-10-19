@@ -18,7 +18,7 @@ export default function Intro() {
       <Typography>
         I'm absolutely thrilled that you've discovered me! I love crafting
         visually stunning websites, online stores, and web services. You'll
-        thoroughly enjoy collaborating with me.{" "}
+        absolutely enjoy collaborating with me.{" "}
       </Typography>
       <Box sx={{ mt: 7 }} component="img" src="/name.png" />
     </Box>
