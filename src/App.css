@@ -11,6 +11,9 @@
   * {
         cursor: auto;
   }
+  .mouse-motion-circle {
+    pointer-events: all; 
+  }
 }
 
 
