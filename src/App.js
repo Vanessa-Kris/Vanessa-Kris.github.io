@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -15,6 +15,7 @@ import Name from "./Sections/Name";
 import Layout from "./Layout";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Intro from "./Sections/Intro";
+import Loader from "./Components/Loader";
 
 let theme = createTheme({
   palette: {
@@ -28,27 +29,32 @@ let theme = createTheme({
   },
 });
 
-class App extends Component {
-  disableRightClick = (e) => {
+function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const disableRightClick = (e) => {
     e.preventDefault();
   };
 
-  componentDidMount() {
-    document.addEventListener("contextmenu", this.disableRightClick);
-  }
+  useEffect(() => {
+    document.addEventListener("contextmenu", disableRightClick);
+    // Simulate an async operation
+    setTimeout(() => {
+      setIsLoading(false);
+      document.removeEventListener("contextmenu", disableRightClick);
+    }, 3000);
+  }, []);
 
-  componentWillUnmount() {
-    document.removeEventListener("contextmenu", this.disableRightClick);
-  }
-
-  render() {
-    return (
-      <React.StrictMode>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
+  return (
+    <React.StrictMode>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        {isLoading ? (
+          <Loader />
+        ) : (
           <Routes>
             <Route
-              path="/"
+              path=""
               element={
                 <Layout
                   nav={<NavBar />}
@@ -66,10 +72,10 @@ class App extends Component {
             />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
-        </ThemeProvider>
-      </React.StrictMode>
-    );
-  }
+        )}
+      </ThemeProvider>
+    </React.StrictMode>
+  );
 }
 
 export default App;

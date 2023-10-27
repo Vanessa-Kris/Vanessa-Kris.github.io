@@ -1,9 +1,17 @@
 import { Box, Container, Typography, Grid } from "@mui/material";
-import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import Loader from "../Components/Loader";
 
 export default function Name() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    // Simulate an async operation
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
   return (
     <Container
       sx={{
@@ -16,11 +24,32 @@ export default function Name() {
       }}
     >
       <Box sx={{ p: 1, border: "1px solid #a55f71", borderRadius: "5px" }}>
-        <Box sx={{ p: 2, border: "1px solid #a55f71", borderRadius: "5px" }}>
-          <img
-            alt=""
-            src="https://img.freepik.com/premium-photo/sute-girl-hacker-with-laptop-avatar-cartoon-style-generated-ai_88188-3329.jpg?size=626&ext=jpg&ga=GA1.2.1563347392.1696364341&semt=ais"
-          />
+        <Box
+          sx={{
+            p: 2,
+            border: "1px solid #a55f71",
+            borderRadius: "5px",
+            height: "fixed",
+          }}
+        >
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <Box
+              component="img"
+              sx={{
+                height: "fixed",
+                width: "fixed",
+                alignItems: "center",
+                justifyContent: "center",
+                display: "flex",
+                top: "50%",
+                left: "50%",
+              }}
+              alt="hacker girl"
+              src="https://img.freepik.com/premium-photo/sute-girl-hacker-with-laptop-avatar-cartoon-style-generated-ai_88188-3329.jpg?size=626&ext=jpg&ga=GA1.2.1563347392.1696364341&semt=ais"
+            />
+          )}
           <Typography textAlign="center" variant="h6" sx={{ m: 2 }}>
             HEY THERE! I AM A
           </Typography>

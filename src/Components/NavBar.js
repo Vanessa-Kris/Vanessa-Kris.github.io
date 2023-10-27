@@ -159,7 +159,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     if (targetElement) {
       window.scrollTo({
         top: targetElement.offsetTop,
-        behavior: "smooth",
+        behavior: "auto",
       });
     }
   });

@@ -60,25 +60,14 @@ export default function Layout(props) {
             }}
           >
             <NavBar />
-            {/* {props.nav} */}
           </Box>
 
           <Grid item md={scrollPosition > 100 ? 3 : 4} className="sticky-grid">
             <Name />
-            {/* {props.name} */}
           </Grid>
         </Grid>
       </Box>
       <Box sx={{ display: { md: "none", xs: "block" } }}>
-        {/* {props.intro}
-        {props.about}
-        {props.experience}
-        {props.portfolio}
-        {props.reviews}
-        {props.blogs}
-        {props.contact}
-        {props.footer} */}
-
         {props.nav}
         {props.name}
         <Box id="intro">{props.intro}</Box>
