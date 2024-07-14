@@ -110,7 +110,21 @@ export default function Portfolio() {
             Afkanerd Deku Messaging
           </Typography>
         </li>
-
+        <li className="listitems">
+          <img src="/res.png" alt="" />
+          <Typography variant="h5" sx={{ fontSize: "20px" }}>
+            SMSWithoutBorders Telemetry
+          </Typography>
+          <Typography
+            component="a"
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://https://telemetry.smswithoutborders.com/"
+            sx={{ color: "#fff", fontSize: "25px" }}
+          >
+            Data Visualization Dashboard
+          </Typography>
+        </li>
         <li className="listitems">
           <img src="/CNav.png" alt="" />
           <Typography variant="h5" sx={{ fontSize: "20px" }}>

@@ -28,11 +28,10 @@ export default function About() {
       </Typography>
 
       <Typography>
-        I'm a front-end developer with more than two years of real-world
-        experience under my belt. I'm from the lively city of Port Harcourt,
-        Nigeria. What really gets me going is creating eye-catching websites.
-        I'm always on the lookout for exciting projects to team up on, and
-        that's a never-ending adventure for me!
+        I'm a software engineer with more than two years of real-world
+        experience. I'm from the lively city of Port Harcourt,
+        Nigeria. What really gets me going is actally food but also seeing things work is a boost.
+        I'm always available for exciting opportunities and collabs, so don't be shy.. text me!
       </Typography>
 
       <Grid container sx={{ my: 5 }}>
@@ -53,7 +52,7 @@ export default function About() {
             <ListItem> Vanessa Christopher Igwe </ListItem>
             <ListItem> She/Her </ListItem>
             <ListItem> 10th August 2000 </ListItem>
-            <ListItem> 23 Years </ListItem>
+            <ListItem> 24 </ListItem>
             <ListItem> Cameroon </ListItem>
             <ListItem> Nigerian </ListItem>
             <ListItem> Food, Open Source, Music. </ListItem>

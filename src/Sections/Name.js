@@ -51,7 +51,7 @@ export default function Name() {
             />
           )}
           <Typography textAlign="center" variant="h6" sx={{ m: 2 }}>
-            HEY THERE! I AM A
+            MEET ME!
           </Typography>
           <Grid
             container
@@ -78,9 +78,9 @@ export default function Name() {
                   sequence={[
                     "Web Developer",
                     500,
-                    "Freelancer",
+                    "Designer",
                     500,
-                    "UI/UX Engineer",
+                    "Software Engineer",
                     500,
                     "Entrepreneur",
                     500,

@@ -8,7 +8,7 @@ export default function Intro() {
         INTRODUCTION
       </Typography> */}
       <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: "#fff" }}>
-        UI/UX Engineer
+        Software Engineer
         <Divider
           flexItem
           sx={{ bgcolor: "#d7d0d7", width: { md: "20%", xs: "40%" }, my: 2 }}
@@ -16,9 +16,9 @@ export default function Intro() {
       </Typography>
 
       <Typography>
-        I'm absolutely thrilled that you've discovered me! I love crafting
-        visually stunning websites, online stores, and web services. You'll
-        absolutely enjoy collaborating with me.{" "}
+        I'm super psyched you found me! I love creating/designing
+        visually stunning websites, I love music, food, art and a bunch of other fun stuff. You'll
+        absolutely love connecting with me.{" "}
       </Typography>
       <Box sx={{ mt: 7 }} component="img" src="/name.png" />
     </Box>

@@ -204,6 +204,32 @@ export default function Experience() {
             <br />* Created non technical content for Stunners Galleria blog
           </CardContent>
         </Card>
+        {/*  */}
+        <Card
+          sx={{ p: { md: 2, xs: 1 }, my: { md: 3, xs: 3 }, color: "#d7d0d7" }}
+        >
+          <Typography sx={{ px: 2, color: "#fff" }} variant="h5">
+            Afkanerd
+            <span style={{ fontSize: "15px", color: "#d7d0d7" }}>
+              ( March 2024 - Today)
+            </span>
+          </Typography>
+          <Typography sx={{ px: 2, pt: 2, color: "#fff" }} variant="h4">
+            Desktop App Developer
+          </Typography>
+          <CardContent sx={{ fontSize: "18px" }}>
+            * RelaySMS {" "}
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://github.com/smswithoutborders/relaysms-desktop/tree/develop"
+            >
+              Desktop App
+            </a>
+           
+          </CardContent>
+        </Card>
       </CustomTabPanel>
       {/* <CustomTabPanel value={value} index={1}>
         <Card sx={{ p: 2, my: 2, bgcolor: "#232323", color: "#d7d0d7" }}>
@@ -262,43 +288,37 @@ export default function Experience() {
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
             Bootstrap
           </Typography>
-          <LinearProgress variant="determinate" value={87} />
+          <LinearProgress variant="determinate" value={90} />
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
             Git/GitHub
           </Typography>
-          <LinearProgress variant="determinate" value={80} />
+          <LinearProgress variant="determinate" value={85} />
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
-            React
+            React JS
           </Typography>
-          <LinearProgress variant="determinate" value={70} />
+          <LinearProgress variant="determinate" value={80} />
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
             JavaScript
           </Typography>
-          <LinearProgress variant="determinate" value={60} />
+          <LinearProgress variant="determinate" value={70} />
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
-            Linux
-          </Typography>
-          <LinearProgress variant="determinate" value={90} />
-        </Box>
-        <Box sx={{ my: 2 }}>
-          <Typography variant="h6" sx={{ fontSize: "15px" }}>
-            NPM
+            Linux System
           </Typography>
           <LinearProgress variant="determinate" value={80} />
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
-            RPM
+            Electron JS
           </Typography>
-          <LinearProgress variant="determinate" value={70} />
+          <LinearProgress variant="determinate" value={80} />
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
