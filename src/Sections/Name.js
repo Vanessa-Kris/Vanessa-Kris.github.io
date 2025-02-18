@@ -78,8 +78,6 @@ export default function Name() {
                   sequence={[
                     "Web Developer",
                     500,
-                    "Designer",
-                    500,
                     "Software Engineer",
                     500,
                     "Entrepreneur",

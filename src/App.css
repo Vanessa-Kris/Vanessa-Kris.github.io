@@ -96,6 +96,7 @@ p{
   .mouse-motion-circle {
     z-index: 9999;
     pointer-events: none; 
+    animation-delay: 0s;
   }
 
   .transition-delay {

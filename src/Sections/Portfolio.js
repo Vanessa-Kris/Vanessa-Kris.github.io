@@ -65,21 +65,23 @@ export default function Portfolio() {
           </Typography>
         </li>
 
+
         <li className="listitems">
-          <img src="/SWOB.png" alt="" />
+          <img src="/desktop.png" alt="" />
           <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Corporate Website
+            Linux Desktop App
           </Typography>
           <Typography
             component="a"
             target="_blank"
             rel="noreferrer noopener"
-            href="https://smswithoutborders.com/"
+            href="https://github.com/smswithoutborders/RelaySMS-Desktop"
             sx={{ color: "#fff", fontSize: "25px" }}
           >
-            SMS Without Borders
+            RelaySMS Desktop
           </Typography>
         </li>
+
         <li className="listitems">
           <img src="/Telemetry.png" alt="" />
           <Typography variant="h5" sx={{ fontSize: "20px" }}>
@@ -119,7 +121,7 @@ export default function Portfolio() {
             component="a"
             target="_blank"
             rel="noreferrer noopener"
-            href="https://https://telemetry.smswithoutborders.com/"
+            href="https://telemetry.smswithoutborders.com/"
             sx={{ color: "#fff", fontSize: "25px" }}
           >
             Data Visualization Dashboard
@@ -178,6 +180,70 @@ export default function Portfolio() {
             sx={{ color: "#fff", fontSize: "25px" }}
           >
             Aroma Kitchen
+          </Typography>
+        </li>
+
+        <li className="listitems">
+          <img src="/dek.png" alt="" />
+          <Typography variant="h5" sx={{ fontSize: "20px" }}>
+            Product website
+          </Typography>
+          <Typography
+            component="a"
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://an35gel.vercel.app/"
+            sx={{ color: "#fff", fontSize: "25px" }}
+          >
+            Random SMS
+          </Typography>
+        </li>
+
+        <li className="listitems">
+          <img src="/newsms.png" alt="" />
+          <Typography variant="h5" sx={{ fontSize: "20px" }}>
+            Product website
+          </Typography>
+          <Typography
+            component="a"
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://landingpage-ashen-nine.vercel.app/"
+            sx={{ color: "#fff", fontSize: "25px" }}
+          >
+            New SMS
+          </Typography>
+        </li>
+
+        <li className="listitems">
+          <img src="/penps.png" alt="" />
+          <Typography variant="h5" sx={{ fontSize: "20px" }}>
+            School website
+          </Typography>
+          <Typography
+            component="a"
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://penps.vercel.app/"
+            sx={{ color: "#fff", fontSize: "25px" }}
+          >
+            PENPS International School
+          </Typography>
+        </li>
+
+        <li className="listitems">
+          <img src="/nerd.png" alt="" />
+          <Typography variant="h5" sx={{ fontSize: "20px" }}>
+            Company website
+          </Typography>
+          <Typography
+            component="a"
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://homepage-seven-pied.vercel.app/"
+            sx={{ color: "#fff", fontSize: "25px" }}
+          >
+            Nerd
           </Typography>
         </li>
 

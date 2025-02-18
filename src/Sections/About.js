@@ -30,7 +30,7 @@ export default function About() {
       <Typography>
         I'm a software engineer with more than two years of real-world
         experience. I'm from the lively city of Port Harcourt,
-        Nigeria. What really gets me going is actally food but also seeing things work is a boost.
+        Nigeria. What really gets me going is sincerely food but also seeing things work is a boost.
         I'm always available for exciting opportunities and collabs, so don't be shy.. text me!
       </Typography>
 
@@ -40,7 +40,6 @@ export default function About() {
             <ListItem> NAME </ListItem>
             <ListItem> PRONOUNS </ListItem>
             <ListItem> BIRTHDAY </ListItem>
-            <ListItem> AGE </ListItem>
             <ListItem> ADDRESS </ListItem>
             <ListItem> NATIONALITY </ListItem>
             <ListItem> INTERESTS</ListItem>
@@ -52,7 +51,6 @@ export default function About() {
             <ListItem> Vanessa Christopher Igwe </ListItem>
             <ListItem> She/Her </ListItem>
             <ListItem> 10th August 2000 </ListItem>
-            <ListItem> 24 </ListItem>
             <ListItem> Cameroon </ListItem>
             <ListItem> Nigerian </ListItem>
             <ListItem> Food, Open Source, Music. </ListItem>

@@ -218,7 +218,7 @@ export default function Experience() {
             Desktop App Developer
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
-            * RelaySMS {" "}
+            * Worked with an awesome team to build the RelaySMS {" "}
             <a
               target="_blank"
               rel="noreferrer noopener"
@@ -227,7 +227,16 @@ export default function Experience() {
             >
               Desktop App
             </a>
-           
+            <br/>
+            * Developed an API endpoint to provide access to {" "}
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://github.com/smswithoutborders/RelaySMS-Publisher"
+            >
+             publication metrics.
+            </a>
           </CardContent>
         </Card>
       </CustomTabPanel>
@@ -312,7 +321,7 @@ export default function Experience() {
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
             Linux System
           </Typography>
-          <LinearProgress variant="determinate" value={80} />
+          <LinearProgress variant="determinate" value={60} />
         </Box>
         <Box sx={{ my: 2 }}>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
@@ -348,7 +357,7 @@ export default function Experience() {
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
             Python
           </Typography>
-          <LinearProgress variant="determinate" value={20} />
+          <LinearProgress variant="determinate" value={30} />
         </Box>
       </CustomTabPanel>
     </Box>

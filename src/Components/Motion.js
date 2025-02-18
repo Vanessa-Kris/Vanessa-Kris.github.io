@@ -9,10 +9,10 @@ const MouseMotionCircle = ({ x, y }) => {
         position: "fixed",
         top: y,
         left: x,
-        width: "40px",
-        height: "40px",
+        width: "20px",
+        height: "20px",
         borderRadius: "50%",
-        border: "7px solid #a55f71",
+        border: "12px solid #a55f71",
         display: { md: "block", xs: "none" },
       }}
     ></motion.div>

@@ -4,9 +4,6 @@ import React from "react";
 export default function Intro() {
   return (
     <Box sx={{ m: { md: 15, xs: 1 }, color: "#d7d0d7", pt: 8 }}>
-      {/* <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
-        INTRODUCTION
-      </Typography> */}
       <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: "#fff" }}>
         Software Engineer
         <Divider
@@ -16,7 +13,7 @@ export default function Intro() {
       </Typography>
 
       <Typography>
-        I'm super psyched you found me! I love creating/designing
+        I'm very happy you found me! I love creating/designing
         visually stunning websites, I love music, food, art and a bunch of other fun stuff. You'll
         absolutely love connecting with me.{" "}
       </Typography>
