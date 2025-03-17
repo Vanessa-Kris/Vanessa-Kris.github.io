@@ -65,7 +65,6 @@ export default function Portfolio() {
           </Typography>
         </li>
 
-
         <li className="listitems">
           <img src="/desktop.png" alt="" />
           <Typography variant="h5" sx={{ fontSize: "20px" }}>
@@ -94,7 +93,7 @@ export default function Portfolio() {
             href="https://smswithoutborders.com:8080/"
             sx={{ color: "#fff", fontSize: "25px" }}
           >
-            SMS Without Borders Open Telemetry
+            Open Telemetry
           </Typography>
         </li>
         <li className="listitems">
@@ -168,144 +167,143 @@ export default function Portfolio() {
       </Typography>
       <ul ref={ref} className="list">
         <li className="listitems">
-          <img src="/Aroma Kitchen.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Resturant website
-          </Typography>
-          <Typography
+          <Box
             component="a"
             target="_blank"
             rel="noreferrer noopener"
             href="https://aroma-kitchen.netlify.app/"
-            sx={{ color: "#fff", fontSize: "25px" }}
           >
-            Aroma Kitchen
-          </Typography>
+            <img src="/Aroma Kitchen.png" alt="" />
+            <Typography variant="h5" sx={{ fontSize: "20px" }}>
+              Resturant website
+            </Typography>
+            <Typography sx={{ color: "#fff", fontSize: "25px" }}>
+              Aroma Kitchen
+            </Typography>
+          </Box>
         </li>
 
         <li className="listitems">
-          <img src="/dek.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Product website
-          </Typography>
-          <Typography
-            component="a"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://an35gel.vercel.app/"
-            sx={{ color: "#fff", fontSize: "25px" }}
-          >
-            Random SMS
-          </Typography>
-        </li>
-
-        <li className="listitems">
-          <img src="/newsms.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Product website
-          </Typography>
-          <Typography
+          <Box
             component="a"
             target="_blank"
             rel="noreferrer noopener"
             href="https://landingpage-ashen-nine.vercel.app/"
-            sx={{ color: "#fff", fontSize: "25px" }}
           >
-            New SMS
-          </Typography>
+            <img src="/dek.png" alt="" />
+            <Typography variant="h5" sx={{ fontSize: "20px" }}>
+              Product website
+            </Typography>
+            <Typography
+              component="a"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://an35gel.vercel.app/"
+              sx={{ color: "#fff", fontSize: "25px" }}
+            >
+              Random SMS
+            </Typography>
+          </Box>
         </li>
 
         <li className="listitems">
-          <img src="/penps.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            School website
-          </Typography>
-          <Typography
+          <Box
+            component="a"
+            target="_blank"
+            rel="noreferrer noopener"
+            href="https://landingpage-ashen-nine.vercel.app/"
+          >
+            <img src="/newsms.png" alt="" />
+            <Typography variant="h5" sx={{ fontSize: "20px" }}>
+              Product website
+            </Typography>
+            <Typography sx={{ color: "#fff", fontSize: "25px" }}>
+              New SMS
+            </Typography>
+          </Box>
+        </li>
+
+        <li className="listitems">
+          <Box
             component="a"
             target="_blank"
             rel="noreferrer noopener"
             href="https://penps.vercel.app/"
-            sx={{ color: "#fff", fontSize: "25px" }}
           >
-            PENPS International School
-          </Typography>
+            <img src="/penps.png" alt="" />
+            <Typography variant="h5" sx={{ fontSize: "20px" }}>
+              School website
+            </Typography>
+            <Typography sx={{ color: "#fff", fontSize: "25px" }}>
+              PENPS International School
+            </Typography>
+          </Box>
         </li>
 
         <li className="listitems">
-          <img src="/nerd.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Company website
-          </Typography>
-          <Typography
+          <Box
             component="a"
             target="_blank"
             rel="noreferrer noopener"
             href="https://homepage-seven-pied.vercel.app/"
-            sx={{ color: "#fff", fontSize: "25px" }}
           >
-            Nerd
-          </Typography>
+            <img src="/nerd.png" alt="" />
+            <Typography variant="h5" sx={{ fontSize: "20px" }}>
+              Company website
+            </Typography>
+            <Typography sx={{ color: "#fff", fontSize: "25px" }}>
+              Nerd
+            </Typography>
+          </Box>
         </li>
 
         <li className="listitems">
-          <img src="/Impact.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Portfolio management website
-          </Typography>
-          <Typography
+          <Box
             component="a"
             target="_blank"
             rel="noreferrer noopener"
             href="https://impact-investment.netlify.app/"
-            sx={{ color: "#fff", fontSize: "25px" }}
           >
-            Impact Investment
-          </Typography>
+            <img src="/Impact.png" alt="" />
+            <Typography variant="h5" sx={{ fontSize: "20px" }}>
+              Portfolio management website
+            </Typography>
+            <Typography sx={{ color: "#fff", fontSize: "25px" }}>
+              Impact Investment
+            </Typography>
+          </Box>
         </li>
         <li className="listitems">
-          <img src="/Devfolio.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Developer Portfolio website
-          </Typography>
-          <Typography
-            component="a"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://vanessa-kris.github.io/"
-            sx={{ color: "#fff", fontSize: "25px" }}
-          >
-            DevFolio
-          </Typography>
-        </li>
-        <li className="listitems">
-          <img src="/Company.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Corporate website
-          </Typography>
-          <Typography
+          <Box
             component="a"
             target="_blank"
             rel="noreferrer noopener"
             href="https://afkanerd.netlify.app/"
-            sx={{ color: "#fff", fontSize: "25px" }}
           >
-            Vanessa Tech
-          </Typography>
+            <img src="/Company.png" alt="" />
+            <Typography variant="h5" sx={{ fontSize: "20px" }}>
+              Corporate website
+            </Typography>
+            <Typography sx={{ color: "#fff", fontSize: "25px" }}>
+              Vanessa Tech
+            </Typography>
+          </Box>
         </li>
         <li className="listitems">
-          <img src="/portfolio1.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Portfolio website
-          </Typography>
-          <Typography
+          <Box
             component="a"
             target="_blank"
             rel="noreferrer noopener"
             href="https://vanessachristopher.netlify.app/"
-            sx={{ color: "#fff", fontSize: "25px" }}
           >
-            Vanessa Christopher
-          </Typography>
+            <img src="/portfolio1.png" alt="" />
+            <Typography variant="h5" sx={{ fontSize: "20px" }}>
+              Portfolio website
+            </Typography>
+            <Typography sx={{ color: "#fff", fontSize: "25px" }}>
+              Vanessa Christopher
+            </Typography>
+          </Box>
         </li>
       </ul>
     </Box>
