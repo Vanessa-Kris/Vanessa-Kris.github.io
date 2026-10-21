@@ -1,177 +1,53 @@
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import { useThemeColors } from "../hooks/useThemeColors";
+import ProjectCard from "../Components/ProjectCard";
+import projects from "../Projects/projectData";
 
 function Projects() {
   const colors = useThemeColors();
 
   return (
-    <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary }}>
+    <Box
+      sx={{
+        mx: { md: 15, xs: 2.5 },
+        pt: { md: 10, xs: 5 },
+        pb: { md: 12, xs: 8 },
+        color: colors.textSecondary,
+      }}
+    >
       <Typography
-        variant="h3"
-        sx={{ mt: { md: 3, xs: 3 }, mb: 6, color: colors.textPrimary }}
+        component="h1"
+        sx={{
+          color: colors.textPrimary,
+          fontWeight: 800,
+          fontSize: { xs: 40, md: 72 },
+          lineHeight: 1.05,
+          letterSpacing: "-0.02em",
+        }}
       >
-        Featured Projects
-        <Divider
-          flexItem
-          sx={{
-            bgcolor: colors.divider,
-            width: { md: "20%", xs: "40%" },
-            my: 2,
-          }}
-        />
+        Selected work
       </Typography>
-      <Grid container spacing={4}>
-        <Grid
-          item
-          md={6}
-          xs={12}
-          component="a"
-          href="/projects/relaysms-website"
-        >
-          <Box
-            component="img"
-            src="/1.png"
-            alt=""
-            sx={{ width: "100%", borderRadius: "12px" }}
-          />
-          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            Product Page Redesign
-          </Typography>
-          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            RelaySMS
-          </Typography>
-        </Grid>
+      <Typography
+        sx={{ fontSize: { md: 20, xs: 17 }, lineHeight: 1.7, maxWidth: 680, mt: 3 }}
+      >
+        Each project brings together several pieces of work done for one
+        product, from websites and apps to dashboards.
+      </Typography>
 
-        <Grid
-          item
-          md={6}
-          xs={12}
-          component="a"
-          href="/projects/relaysms-telemetry"
-        >
+      <Box sx={{ mt: { md: 10, xs: 6 } }}>
+        {projects.map((p) => (
           <Box
-            component="img"
-            src="/3.png"
-            alt=""
-            sx={{ width: "100%", borderRadius: "12px" }}
-          />
-          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            Dashboard
-          </Typography>
-          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            RelaySMS telemetry Dashboard
-          </Typography>
-        </Grid>
-
-        <Grid item md={6} xs={12} component="a" href="/projects/shortmesh">
-          <Box
-            component="img"
-            src="/project-shortmesh.png"
-            alt=""
-            sx={{ width: "100%", borderRadius: "12px" }}
-          />
-          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            Product
-          </Typography>
-          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            ShortMesh
-          </Typography>
-        </Grid>
-
-        <Grid
-          item
-          md={6}
-          xs={12}
-          component="a"
-          href="https://stunnersgalleria.com"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Box
-            component="img"
-            src="/first try.png"
-            alt=""
-            sx={{ width: "100%", borderRadius: "12px" }}
-          />
-          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            E-commerce website
-          </Typography>
-          <Typography
-            href="https://stunnersgalleria.com"
-            sx={{ color: colors.textPrimary, fontSize: "25px" }}
+            key={p.slug}
+            sx={{
+              py: { md: 8, xs: 5 },
+              borderTop: `1px solid ${colors.borderPrimary}`,
+            }}
           >
-            Stunners Galleria
-          </Typography>
-        </Grid>
-
-        <Grid
-          item
-          md={6}
-          xs={12}
-          component="a"
-          href="/projects/relaysms-desktop"
-        >
-          <Box
-            component="img"
-            src="/Untitled design(9).png"
-            alt=""
-            sx={{ width: "100%", borderRadius: "12px" }}
-          />
-          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            Desktop App
-          </Typography>
-          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            RelaySMS Desktop
-          </Typography>
-        </Grid>
-
-        <Grid
-          item
-          md={6}
-          xs={12}
-          component="a"
-          href="https://afkanerd.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Box
-            component="img"
-            src="/Untitled design(10).png"
-            alt=""
-            sx={{ width: "100%", borderRadius: "12px" }}
-          />
-          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            landging Page
-          </Typography>
-          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            Afkanerd
-          </Typography>
-        </Grid>
-
-        <Grid
-          item
-          md={6}
-          xs={12}
-          component="a"
-          href="https://blog.stunnersgalleria.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <Box
-            component="img"
-            src="/Untitled design(8).png"
-            alt=""
-            sx={{ width: "50%", borderRadius: "12px" }}
-          />
-          <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-            Blogging
-          </Typography>
-          <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-            Stunners Galleria Blog
-          </Typography>
-        </Grid>
-      </Grid>
+            <ProjectCard project={p} variant="row" />
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 }

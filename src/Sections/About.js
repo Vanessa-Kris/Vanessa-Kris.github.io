@@ -5,21 +5,8 @@ import { useThemeColors } from "../hooks/useThemeColors";
 export default function About() {
   const colors = useThemeColors();
   
-  // const handleDownloadClick = () => {
-  //   const cvUrl = "/Resume.pdf";
-  //   const anchor = document.createElement("a");
-  //   anchor.href = cvUrl;
-  //   anchor.download = "Vanessa_Resume.pdf";
-  //   anchor.style.display = "none";
-  //   document.body.appendChild(anchor);
-  //   anchor.click();
-  //   document.body.removeChild(anchor);
-  // };
   return (
     <Box sx={{ m: { md: 15, xs: 1 }, pt: 7, color: colors.textSecondary, px: {xs: 1.5} }}>
-      {/* <Typography variant="h6" sx={{ my: { md: 5, xs: 5 }, fontWeight: 600 }}>
-        ABOUT ME
-      </Typography> */}
       <Typography variant="h3" sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}>
         About Me
         <Divider
@@ -55,28 +42,9 @@ export default function About() {
             <ListItem> Cameroon </ListItem>
             <ListItem> Nigerian </ListItem>
             <ListItem> Food, Open Source, Music. </ListItem>
-            <ListItem> vanessaigwe1@gmail.com </ListItem>
+            <ListItem> info@vanessaigwe.com </ListItem>
           </List>
         </Grid>
-        {/* <Grid item md={5} xs={12}>
-          <Box
-            justifyContent="center"
-            // display="flex"
-            textAlign="center"
-            sx={{ border: "1px solid #d7d0d7", borderRadius: "10px", m: 2 }}
-            onClick={handleDownloadClick}
-            style={{ cursor: "pointer" }}
-          >
-            <FontAwesomeIcon
-              style={{ fontSize: "60px", padding: 40 }}
-              icon={faDownload}
-              bounce
-              color="#d7d0d7"
-            />{" "}
-            <br />
-            <Typography variant="body">Download CV</Typography>
-          </Box>
-        </Grid> */}
       </Grid>
     </Box>
   );

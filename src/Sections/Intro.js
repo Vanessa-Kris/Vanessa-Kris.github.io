@@ -1,5 +1,4 @@
 import { Box, Typography, Divider } from "@mui/material";
-import React from "react";
 import { useThemeColors } from "../hooks/useThemeColors";
 
 export default function Intro() {
@@ -10,15 +9,15 @@ export default function Intro() {
       sx={{
         m: { md: 15, xs: 1 },
         color: colors.textSecondary,
-        pt: 8,
+        pt: 4,
         px: { xs: 1.5 },
       }}
     >
       <Typography
-        variant="h3"
-        sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary }}
+        variant="h1"
+        sx={{ my: { md: 3, xs: 3 }, color: colors.textPrimary, fontSize: { md: "85px", xs: "48px" }, }}
       >
-        Software Developer & Designer
+        UI/UX Designer & Developer
         <Divider
           flexItem
           sx={{
@@ -29,16 +28,24 @@ export default function Intro() {
         />
       </Typography>
 
-      <Typography>
-        Creative software developer and designer building beautiful and
-        functional user interfaces. Outside tech, I’m building a fashion brand,
-        obsessed with loc culture.
+      <Typography sx={{ pt: 2, fontSize: { xs: "16px", md: "23px" } }}>
+        Finding the balance between beauty and functionality. Enjoying the
+        chaos of designing/creating and the satisfaction of bringing it to life. Committed
+        to open source and free communication.
       </Typography>
-      <Box
-        sx={{ mt: 7, width: { md: "70%", xs: "95%" } }}
-        component="img"
-        src="/VanessaCIgwe.svg"
-      />
+
+      <Typography
+        sx={{
+          mt: { md: 12, xs: 8 },
+          fontFamily: "'Dancing Script', cursive",
+          fontWeight: 700,
+          color: "primary.main",
+          fontSize: { md: "77px", xs: "48px" },
+          lineHeight: 1.2,
+        }}
+      >
+        Vanessa Chris. Igwe
+      </Typography>
     </Box>
   );
 }

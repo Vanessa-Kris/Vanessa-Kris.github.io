@@ -1,13 +1,12 @@
-import { Box, Typography, Divider } from "@mui/material";
+import { Box, Typography, Divider, Grid } from "@mui/material";
 import React from "react";
-import { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { ArrowUpOutlined } from "@ant-design/icons";
 import { useThemeColors } from "../hooks/useThemeColors";
+import ProjectCard from "../Components/ProjectCard";
+import projects from "../Projects/projectData";
 
 export default function Portfolio() {
   const colors = useThemeColors();
-  const ref = useRef(null);
-  const { scrollXProgress } = useScroll({ container: ref });
 
   return (
     <Box
@@ -18,8 +17,8 @@ export default function Portfolio() {
         px: { xs: 1.5 },
       }}
     >
-      <Typography variant="h6" sx={{ my: { md: 2, xs: 2 }, fontWeight: 600 }}>
-        PORTFOLIO
+      <Typography variant="body2" sx={{ my: { md: 2, xs: 2 } }}>
+        PROJECTS
       </Typography>
       <Box
         sx={{
@@ -33,7 +32,7 @@ export default function Portfolio() {
       >
         <Box>
           <Typography variant="h3" sx={{ color: colors.textPrimary }}>
-            Featured Projects
+            Work Highlights
           </Typography>
           <Divider
             flexItem
@@ -45,250 +44,73 @@ export default function Portfolio() {
           />
         </Box>
 
-        {/* View All Projects Link */}
-        <Typography
+        <Box
           component="a"
           href="/projects"
+          aria-label="See all work"
           sx={{
-            color: "#673147",
-            fontSize: { md: "16px", xs: "14px" },
-            fontWeight: 600,
-            textDecoration: "underline",
-            textUnderlineOffset: "4px",
-            position: "relative",
-            padding: { md: "10px 0", xs: "8px 0" },
-            transition: "all 0.3s ease",
-            whiteSpace: "nowrap",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+            overflow: "hidden",
+            textDecoration: "none",
+            border: `1px solid ${colors.borderPrimary}`,
+            borderRadius: "999px",
+            height: 48,
+            width: 48,
+            flexShrink: 0,
+            transition: "width 0.35s ease, border-color 0.3s ease",
             "&:hover": {
-              color: colors.textPrimary,
-              textDecorationColor: colors.textPrimary,
+              width: 176,
+              borderColor: colors.textPrimary,
             },
-            "&::after": {
-              content: '"→"',
-              marginLeft: "8px",
-              transition: "margin-left 0.3s ease",
-            },
-            "&:hover::after": {
-              marginLeft: "12px",
+            "&:hover .view-all-label": {
+              maxWidth: "140px",
+              opacity: 1,
+              marginLeft: "16px",
             },
           }}
         >
-          View All Projects
-        </Typography>
+          <Typography
+            className="view-all-label"
+            sx={{
+              color: colors.textPrimary,
+              fontSize: "14px",
+              fontWeight: 600,
+              whiteSpace: "nowrap",
+              maxWidth: 0,
+              opacity: 0,
+              marginLeft: 0,
+              overflow: "hidden",
+              transition:
+                "max-width 0.35s ease, opacity 0.25s ease, margin-left 0.35s ease",
+            }}
+          >
+            See all work
+          </Typography>
+          <Box
+            sx={{
+              width: 46,
+              height: 46,
+              flexShrink: 0,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: colors.textPrimary,
+            }}
+          >
+            <ArrowUpOutlined style={{ fontSize: "18px", transform: "rotate(45deg)" }} />
+          </Box>
+        </Box>
       </Box>
 
-      <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
-        <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
-        <motion.circle
-          cx="50"
-          cy="50"
-          r="30"
-          pathLength="1"
-          className="indicator"
-          style={{ pathLength: scrollXProgress, color: "white" }}
-        />
-      </svg>
-
-      <ul ref={ref} className="list">
-        <li className="listitems" style={{ flex: "0 0 550px" }}>
-          <Box component="a" href="/projects/relaysms-website">
-            <Box
-              component="img"
-              src="/1.png"
-              alt=""
-              sx={{ width: "100%", borderRadius: "12px" }}
-            />
-            <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-              Landing Page
-            </Typography>
-            <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-              RelaySMS
-            </Typography>
-          </Box>
-        </li>
-
-        <li className="listitems" style={{ flex: "0 0 550px" }}>
-          <Box component="a" href="/projects/relaysms-telemetry">
-            <Box
-              component="img"
-              src="/3.png"
-              alt=""
-              sx={{ width: "100%", borderRadius: "12px" }}
-            />
-            <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-              Dashboard
-            </Typography>
-            <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-              RelaySMS Telemetry
-            </Typography>
-          </Box>
-        </li>
-
-        <li className="listitems" style={{ flex: "0 0 550px" }}>
-          <Box component="a" href="/projects/shortmesh">
-            <Box
-              component="img"
-              src="/project-shortmesh.png"
-              alt=""
-              sx={{ width: "100%", borderRadius: "12px" }}
-            />
-            <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-              Product
-            </Typography>
-            <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-              ShortMesh
-            </Typography>
-          </Box>
-        </li>
-
-        <li className="listitems" style={{ flex: "0 0 550px" }}>
-          <Box
-            component="a"
-            href="https://stunnersgalleria.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <Box
-              component="img"
-              src="/first try.png"
-              alt=""
-              sx={{ width: "100%", borderRadius: "12px" }}
-            />
-            <Typography variant="h5" sx={{ fontSize: "20px", mt: 2 }}>
-              E-commerce website
-            </Typography>
-            <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-              Stunners Galleria
-            </Typography>
-          </Box>
-        </li>
-
-        {/* <li className="listitems" style={{ flex: "0 0 300px" }}>
-          <Box component="a" href="https://blog.stunnersgalleria.com/">
-            <Box
-              component="img"
-              src="/Untitled design(8).png"
-              alt=""
-              sx={{ width: "300px", height: "400px", borderRadius: "12px" }}
-            />
-            <Typography variant="h5" sx={{ fontSize: "20px" }}>
-              Blogging Website
-            </Typography>
-            <Typography sx={{ color: colors.textPrimary, fontSize: "25px" }}>
-              Stunners Galleria Blog
-            </Typography>
-          </Box>
-        </li> */}
-
-        {/* <li className="listitems">
-          <img src="/Stunners Blog.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Blogging Website
-          </Typography>
-          <Typography
-            component="a"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://blog.stunnersgalleria.com/"
-            sx={{ color: colors.textPrimary, fontSize: "25px" }}
-          >
-            Stunners Galleria Blog
-          </Typography>
-        </li>
-
-        <li className="listitems">
-          <img src="/desktop.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Linux Desktop App
-          </Typography>
-          <Typography
-            component="a"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://github.com/smswithoutborders/RelaySMS-Desktop"
-            sx={{ color: colors.textPrimary, fontSize: "25px" }}
-          >
-            RelaySMS Desktop
-          </Typography>
-        </li>
-
-        <li className="listitems">
-          <img src="/Telemetry.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            User analytics board
-          </Typography>
-          <Typography
-            component="a"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://smswithoutborders.com:8080/"
-            sx={{ color: colors.textPrimary, fontSize: "25px" }}
-          >
-            Open Telemetry
-          </Typography>
-        </li>
-        <li className="listitems">
-          <img src="/Deku.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Messaging Website
-          </Typography>
-          <Typography
-            component="a"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://github.com/deku-messaging/Deku-Web-FE"
-            sx={{ color: colors.textPrimary, fontSize: "25px" }}
-          >
-            Afkanerd Deku Messaging
-          </Typography>
-        </li>
-        <li className="listitems">
-          <img src="/res.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            SMSWithoutBorders Telemetry
-          </Typography>
-          <Typography
-            component="a"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://telemetry.smswithoutborders.com/"
-            sx={{ color: colors.textPrimary, fontSize: "25px" }}
-          >
-            Data Visualization Dashboard
-          </Typography>
-        </li>
-        <li className="listitems">
-          <img src="/CNav.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            E-learning Platform
-          </Typography>
-          <Typography
-            component="a"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://career-navigator-academy.github.io/"
-            sx={{ color: colors.textPrimary, fontSize: "25px" }}
-          >
-            Career Navigator Academy
-          </Typography>
-        </li>
-        <li className="listitems">
-          <img src="/sheba.png" alt="" />
-          <Typography variant="h5" sx={{ fontSize: "20px" }}>
-            Blogging web
-          </Typography>
-          <Typography
-            component="a"
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://sheba-chris.netlify.app"
-            sx={{ color: colors.textPrimary, fontSize: "25px" }}
-          >
-            Sheba's Blog
-          </Typography>
-        </li> */}
-      </ul>
-      {/*  */}
+      <Grid container spacing={4} rowSpacing={7}>
+        {projects.map((p, i) => (
+          <Grid item xs={12} md={i === 0 ? 12 : 6} key={p.slug}>
+            <ProjectCard project={p} variant={i === 0 ? "row" : "card"} />
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 }
