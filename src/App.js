@@ -1,73 +1,81 @@
 import React, { useEffect, useState, useMemo } from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
 import About from "./Sections/About";
 import Portfolio from "./Sections/Portfolio";
-// import Reviews from "./Sections/Reviews";
 import Experience from "./Sections/Experience";
 // import Blogs from "./Sections/Blogs";
 import PageNotFound from "./Pages/404";
-import Contact from "./Sections/Contact";
-import Footer from "./Components/Footer";
-import NavBar from "./Components/NavBar";
+import GetInTouch from "./Pages/GetInTouch";
 import Name from "./Sections/Name";
 import Layout from "./Layout";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import {
+  ThemeProvider,
+  createTheme,
+  responsiveFontSizes,
+} from "@mui/material/styles";
 import Intro from "./Sections/Intro";
 import Loader from "./Components/Loader";
 import Projects from "./Pages/Projects";
-import RelaySMSWebsite from "./Projects/RelaySMS-Website";
-import RelaySMSTelemetry from "./Projects/RelaySMS-Telemetry";
-import RelaySMSDesktop from "./Projects/RelaySMS-Desktop";
+import RelaySMS from "./Projects/RelaySMS";
+import SMSWithoutBorders from "./Projects/SMSWithoutBorders";
 import Shortmesh from "./Projects/Shortmesh";
+import Promisefru from "./Projects/Promisefru";
 import { HelmetProvider } from "react-helmet-async";
 import SEO from "./Components/SEO";
+import Afkanerd from "./Projects/Afkanerd";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [mode, setMode] = useState(() => {
-    // Get theme from localStorage or default to 'light'
-    return localStorage.getItem('themeMode') || 'dark';
+    return localStorage.getItem("themeMode") || "dark";
   });
 
   const theme = useMemo(
     () =>
-      createTheme({
-        palette: {
-          mode: mode,
-          primary: {
-            main: "#673147",
+      responsiveFontSizes(
+        createTheme({
+          palette: {
+            mode: mode,
+            primary: {
+              main: "#681838",
+            },
+            secondary: {
+              main: mode === "dark" ? "#fff" : "#000",
+            },
+            background: {
+              default: mode === "dark" ? "#161616" : "#ffffff",
+              paper: mode === "dark" ? "#191919" : "#fafafa",
+            },
+            text: {
+              primary: mode === "dark" ? "#d7d0d7" : "#1a1a1a",
+              secondary: mode === "dark" ? "#999" : "#666",
+            },
           },
-          secondary: {
-            main: mode === "dark" ? "#fff" : "#000",
+          typography: {
+            fontFamily: "'Gabarito', sans-serif",
+            body1: { fontFamily: "'Nunito Sans', sans-serif", fontWeight: 400 },
+            body2: { fontFamily: "'Nunito Sans', sans-serif", fontWeight: 400 },
           },
-          background: {
-            default: mode === "dark" ? "#161616" : "#ffffff",
-            paper: mode === "dark" ? "#191919" : "#fafafa",
-          },
-          text: {
-            primary: mode === "dark" ? "#d7d0d7" : "#1a1a1a",
-            secondary: mode === "dark" ? "#999" : "#666",
-          },
-        },
-        components: {
-          MuiCssBaseline: {
-            styleOverrides: {
-              body: {
-                transition: "background-color 0.3s ease, color 0.3s ease",
+          components: {
+            MuiCssBaseline: {
+              styleOverrides: {
+                body: {
+                  transition: "background-color 0.3s ease, color 0.3s ease",
+                },
               },
             },
           },
-        },
-      }),
-    [mode]
+        }),
+      ),
+    [mode],
   );
 
   const toggleTheme = () => {
     setMode((prevMode) => {
       const newMode = prevMode === "dark" ? "light" : "dark";
-      localStorage.setItem('themeMode', newMode);
+      localStorage.setItem("themeMode", newMode);
       return newMode;
     });
   };
@@ -78,14 +86,12 @@ function App() {
 
   useEffect(() => {
     document.addEventListener("contextmenu", disableRightClick);
-    // Simulate an async operation
     setTimeout(() => {
       setIsLoading(false);
       document.removeEventListener("contextmenu", disableRightClick);
     }, 3000);
   }, []);
 
-  // Update body class when theme changes
   useEffect(() => {
     document.body.className = mode === "dark" ? "dark-mode" : "light-mode";
   }, [mode]);
@@ -107,16 +113,12 @@ function App() {
                     <Layout
                       mode={mode}
                       toggleTheme={toggleTheme}
-                      nav={<NavBar mode={mode} toggleTheme={toggleTheme} />}
                       name={<Name />}
                       intro={<Intro />}
                       about={<About />}
                       portfolio={<Portfolio />}
                       experience={<Experience />}
-                      // reviews={<Reviews />}
                       // blogs={<Blogs />}
-                      contact={<Contact />}
-                      footer={<Footer />}
                     />
                   </>
                 }
@@ -128,7 +130,7 @@ function App() {
                   <>
                     <SEO
                       title="Projects - Vanessa Christopher"
-                      description="Explore my portfolio of web development projects including RelaySMS, Stunners Galleria, and other innovative web applications."
+                      description="See projects Vanessa has worked on including RelaySMS, ShortMesh, and other web applications."
                       url="/projects"
                     />
                     <Layout mode={mode} toggleTheme={toggleTheme}>
@@ -138,49 +140,76 @@ function App() {
                 }
               />
               <Route
-                path="projects/relaysms-website"
+                path="/get-in-touch"
                 element={
                   <>
                     <SEO
-                      title="RelaySMS Website - Project by Vanessa Christopher"
-                      description="A modern landing page for RelaySMS, built with React and Material-UI. Showcasing clean design and user-friendly interface."
-                      url="/projects/relaysms-website"
+                      title="Get in touch - Vanessa Christopher"
+                      description="Have a project, collaboration, or just want to say hello? Get in touch with Vanessa Christopher."
+                      url="/get-in-touch"
                     />
                     <Layout mode={mode} toggleTheme={toggleTheme}>
-                      <RelaySMSWebsite />
+                      <GetInTouch />
                     </Layout>
                   </>
                 }
               />
               <Route
-                path="projects/relaysms-telemetry"
+                path="projects/relaysms"
                 element={
                   <>
                     <SEO
-                      title="RelaySMS Telemetry Dashboard - Project by Vanessa Christopher"
-                      description="An analytics dashboard for RelaySMS featuring data visualization, real-time metrics, and comprehensive user insights."
-                      url="/projects/relaysms-telemetry"
+                      title="RelaySMS - Project by Vanessa Christopher"
+                      description="Product page redesign and desktop app for RelaySMS, built with React and Material-UI. Showcasing clean design and a user-friendly interface."
+                      url="/projects/relaysms"
                     />
                     <Layout mode={mode} toggleTheme={toggleTheme}>
-                      <RelaySMSTelemetry />
+                      <RelaySMS />
                     </Layout>
                   </>
                 }
+              />
+              <Route
+                path="projects/smswithoutborders"
+                element={
+                  <>
+                    <SEO
+                      title="SMSWithoutBorders - Project by Vanessa Christopher"
+                      description="An analytics dashboard for RelaySMS featuring data visualization, real-time metrics, and comprehensive user insights."
+                      url="/projects/smswithoutborders"
+                    />
+                    <Layout mode={mode} toggleTheme={toggleTheme}>
+                      <SMSWithoutBorders />
+                    </Layout>
+                  </>
+                }
+              />
+              <Route
+                path="projects/afkanerd"
+                element={
+                  <>
+                    <SEO
+                      title="Afkanerd - Project by Vanessa Christopher"
+                      description="Brand identity and website for an African team of engineers, researchers and creatives."
+                      url="/projects/afkanerd"
+                    />
+                    <Layout mode={mode} toggleTheme={toggleTheme}>
+                      <Afkanerd />
+                    </Layout>
+                  </>
+                }
+              />
+              <Route
+                path="projects/relaysms-website"
+                element={<Navigate to="/projects/relaysms" replace />}
               />
               <Route
                 path="projects/relaysms-desktop"
-                element={
-                  <>
-                    <SEO
-                      title="RelaySMS Desktop App - Project by Vanessa Christopher"
-                      description="A cross-platform desktop application for RelaySMS, built with modern web technologies for seamless messaging experience."
-                      url="/projects/relaysms-desktop"
-                    />
-                    <Layout mode={mode} toggleTheme={toggleTheme}>
-                      <RelaySMSDesktop />
-                    </Layout>
-                  </>
-                }
+                element={<Navigate to="/projects/relaysms" replace />}
+              />
+              <Route
+                path="projects/relaysms-telemetry"
+                element={<Navigate to="/projects/smswithoutborders" replace />}
               />
               <Route
                 path="projects/shortmesh"
@@ -193,6 +222,21 @@ function App() {
                     />
                     <Layout mode={mode} toggleTheme={toggleTheme}>
                       <Shortmesh />
+                    </Layout>
+                  </>
+                }
+              />
+              <Route
+                path="projects/promisefru"
+                element={
+                  <>
+                    <SEO
+                      title="Promise Fru - Project by Vanessa Christopher"
+                      description="Brand identity, colour scheme, logo and website design for Promise Fru, a cryptographic protocol and backend engineer."
+                      url="/projects/promisefru"
+                    />
+                    <Layout mode={mode} toggleTheme={toggleTheme}>
+                      <Promisefru />
                     </Layout>
                   </>
                 }

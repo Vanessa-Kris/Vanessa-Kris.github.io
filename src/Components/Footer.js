@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <Box sx={{ my: { md: 10, xs: 2 }, pt: 7, color: colors.textSecondary }}>
-      <Divider flexItem sx={{ bgcolor: "#673147", my: 2 }} />
+      <Divider flexItem sx={{ bgcolor: colors.borderPrimary, my: 2 }} />
       <Box sx={{ paddingLeft: { md: 7, xs: 2 } }}>
         Copyright © {currentYear}. All rights reserved. <br /> Developed by Vanessa Kris
       </Box>

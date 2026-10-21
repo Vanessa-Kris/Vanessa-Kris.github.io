@@ -74,25 +74,9 @@ export default function Experience() {
             label="Skills"
             {...a11yProps(1)}
           />
-          {/* <Tab
-            sx={{ color: colors.textSecondary, fontSize: { md: "20px", xs: "15px" } }}
-            label="Skills"
-            {...a11yProps(2)}
-          /> */}
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        {/* <Box
-          sx={{
-            "& .MuiCard-root": {
-              bgcolor: colors.bgSecondary,
-              color: colors.textSecondary,
-              border: `0.2px solid ${colors.divider}`,
-              boxShadow: "none",
-              backgroundImage: "none",
-            },
-          }}
-        > */}
         <Card
           elevation={0}
           sx={{
@@ -114,7 +98,7 @@ export default function Experience() {
             sx={{ px: 2, pt: 2, color: colors.textPrimary }}
             variant="h4"
           >
-            Fedora (Package Manager)
+            Fedora (Package Manager) Intern
           </Typography>
           <CardContent sx={{ fontSize: "18px" }}>
             * Packaged software for the Fedora Operating System :
@@ -152,7 +136,112 @@ export default function Experience() {
             <br />* Collaborative developement with Git ( Pagure )
           </CardContent>
         </Card>
-        {/*  */}
+        <Card
+          elevation={0}
+          sx={{
+            p: { md: 2, xs: 1 },
+            my: { md: 3, xs: 3 },
+            border: `0.2px solid ${colors.borderSecondary}`,
+          }}
+        >
+          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
+            Afkanerd{" "}
+            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
+              ( Apr 2022 - Present )
+            </span>
+          </Typography>
+          <Typography
+            sx={{ px: 2, pt: 2, color: colors.textPrimary }}
+            variant="h4"
+          >
+            UI/UX Designer & Front-end Engineer
+          </Typography>
+          <CardContent sx={{ fontSize: "18px" }}>
+            Designed, and/or developed and maintained the user interfaces for all Afkanerd
+            products, including:
+            <br/>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://afkanerd.com"
+            >
+              Afkanerd website
+            </a>
+            <br/>
+             <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://smswithoutborders.com"
+            >
+              SMSWithoutBorders website
+            </a>
+            <br/>
+             <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://relay.smswithoutborders.com"
+            >
+              RelaySMS website
+            </a>
+            <br/>
+             <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://relay.smswithoutborders.com/download"
+            >
+              RelaySMS app
+            </a>
+            <br/>
+             <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://afkanerd.com"
+            >
+              Afkanerd website
+            </a>
+            <br/>
+             <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://authy.shortmesh.com"
+            >
+              Shortmesh Authy website
+            </a>
+            <br/>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://telemetry.smswithoutborders.com"
+            >
+              SMSWithoutBorders User analytics{" "}
+            </a>
+            <br/>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://smswithoutborders.com/"
+            >
+              SMSWithoutBorders web platform{" "}
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              style={{ textDecoration: "underline" }}
+              href="https://github.com/deku-messaging/Deku-Web-FE"
+            >
+              web interface{" "}
+            </a>
+          </CardContent>
+        </Card>
+
         <Card
           elevation={0}
           sx={{
@@ -195,187 +284,8 @@ export default function Experience() {
             <br />* Created non technical content for Stunners Galleria blog
           </CardContent>
         </Card>
-        {/*  */}
-        {/*  */}
-        <Card
-          elevation={0}
-          sx={{
-            p: { md: 2, xs: 1 },
-            my: { md: 3, xs: 3 },
-            border: `0.2px solid ${colors.borderSecondary}`,
-          }}
-        >
-          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
-            Afkanerd{" "}
-            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
-              ( Apr 2022 - Apr 2023 )
-            </span>
-          </Typography>
-          <Typography
-            sx={{ px: 2, pt: 2, color: colors.textPrimary }}
-            variant="h4"
-          >
-            Jr. Front-end Engineer
-          </Typography>
-          <CardContent sx={{ fontSize: "18px" }}>
-            * Worked with the backend team to build{" "}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ textDecoration: "underline" }}
-              href="https://smswithoutborders.com:8080/"
-            >
-              SMSWithoutBorders User analytics{" "}
-            </a>
-            <br />* Worked closely with the backend team to maintain{" "}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ textDecoration: "underline" }}
-              href="https://smswithoutborders.com/"
-            >
-              SMSWithoutBorders web platform{" "}
-            </a>
-            <br />* Worked closely with the backend team to build Deku SMS
-            Messaging{" "}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ textDecoration: "underline" }}
-              href="https://github.com/deku-messaging/Deku-Web-FE"
-            >
-              web interface{" "}
-            </a>
-          </CardContent>
-        </Card>
-        <Card
-          elevation={0}
-          sx={{
-            p: { md: 2, xs: 1 },
-            my: { md: 3, xs: 3 },
-            border: `0.2px solid ${colors.borderSecondary}`,
-          }}
-        >
-          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
-            Afkanerd
-            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
-              ( March 2024 - March 2025 )
-            </span>
-          </Typography>
-          <Typography
-            sx={{ px: 2, pt: 2, color: colors.textPrimary }}
-            variant="h4"
-          >
-            Desktop App Developer
-          </Typography>
-          <CardContent sx={{ fontSize: "18px" }}>
-            * Worked with an awesome team to build the RelaySMS{" "}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ textDecoration: "underline" }}
-              href="https://github.com/smswithoutborders/relaysms-desktop/tree/develop"
-            >
-              Desktop App
-            </a>
-            <br />* Developed an API endpoint to provide access to{" "}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ textDecoration: "underline" }}
-              href="https://github.com/smswithoutborders/RelaySMS-Publisher"
-            >
-              publication metrics.
-            </a>
-          </CardContent>
-        </Card>
-        {/*  */}
-        <Card
-          elevation={0}
-          sx={{
-            p: { md: 2, xs: 1 },
-            my: { md: 3, xs: 3 },
-            border: `0.2px solid ${colors.borderSecondary}`,
-          }}
-        >
-          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
-            Afkanerd
-            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
-              ( March 2025 - Today )
-            </span>
-          </Typography>
-          <Typography
-            sx={{ px: 2, pt: 2, color: colors.textPrimary }}
-            variant="h4"
-          >
-            Front-end Engineer
-          </Typography>
-          <CardContent sx={{ fontSize: "18px" }}>
-            * Worked with an awesome team to re-build the RelaySMS{" "}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
-              style={{ textDecoration: "underline" }}
-              href="https://github.com/smswithoutborders/relaysms-website/"
-            >
-              Website
-            </a>
-            <br />* Redesigned landing/ product pages across the organization{" "}
-            <br />* Designed and implemented new user interfaces using React{" "}
-            <br /> * Created branding assets and marketing materials for
-            RelaySMS
-            <br /> * Collaborated with cross-functional teams to ensure brand
-            consistency
-            <br /> * Conducted user research and usability testing to inform
-            design decisions
-            <br /> * Worked on NostaBridge product page and dashboard, also
-            created branding assets
-            <br /> * Worked on QueueDroid page and dashboard, also created
-            branding assets
-          </CardContent>
-        </Card>
-        {/* </Box> */}
-      </CustomTabPanel>
-      {/* <CustomTabPanel value={value} index={1}>
-        <Card sx={{ p: 2, my: 2, bgcolor: colors.bgSecondary, color: colors.textSecondary }}>
-          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
-            Faith International College{" "}
-            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
-              ( 2010 - 2016 )
-            </span>
-          </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
-            High Scool
-          </Typography>
-          <CardContent sx={{ fontSize: "18px" }}>
-            Obtained my WAEC certification (West African Examination Council).
-            You can download it{" "}
-            <span
-              style={{ cursor: "pointer", textDecoration: "underline" }}
-              onClick={handleDownloadClick}
-            >
-              here.
-            </span>
-          </CardContent>
-        </Card>
 
-        
-        <Card sx={{ p: 2, my: 2, bgcolor: colors.bgSecondary, color: colors.textSecondary }}>
-          <Typography sx={{ px: 2, color: colors.textPrimary }} variant="h5">
-            RIVERS STATE UNIVERSITY OF SCIENCE AND TECHNOLOGY{" "}
-            <span style={{ fontSize: "15px", color: colors.textSecondary }}>
-              ( 2016 - 2019 )
-            </span>
-          </Typography>
-          <Typography sx={{ px: 2, pt: 2, color: colors.textPrimary }} variant="h4">
-            Biology
-          </Typography>
-          <CardContent sx={{ fontSize: "18px" }}>
-            Adipisicing Lorem ipsum dolor sit amet, consectetur elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </CardContent>
-        </Card>
-      </CustomTabPanel> */}
+      </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         <Box>
           <Typography variant="h6" sx={{ fontSize: "15px" }}>
